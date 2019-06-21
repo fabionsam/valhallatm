@@ -1,23 +1,49 @@
 import React from 'react';
 import Header from '../Header/index.js';
 import Footer from '../Footer/index.js';
+import ReCAPTCHA from "react-google-recaptcha";
 
 class Recruit extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {value: ''};
+        this.state = {nome: '', familia: '', gs: '', classe: '', pq: '', captcha: ''};
 
-        this.handleChange = this.handleChange.bind(this);
+        this.handleChangeNome = this.handleChangeNome.bind(this);
+        this.handleChangeFamilia = this.handleChangeFamilia.bind(this);
+        this.handleChangeGs = this.handleChangeGs.bind(this);
+        this.handleChangeClasse = this.handleChangeClasse.bind(this);
+        this.handleChangePq = this.handleChangePq.bind(this);
+        this.handleCaptcha = this.handleCaptcha.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    handleChange(event) {
-        this.setState({value: event.target.value});
+    handleChangeNome(event) {
+        this.setState({nome: event.target.value});
+    }
+
+    handleChangeFamilia(event) {
+        this.setState({familia: event.target.value});
+    }
+
+    handleChangeGs(event) {
+        this.setState({gs: event.target.value});
+    }
+
+    handleChangeClasse(event) {
+        this.setState({classe: event.target.value});
+    }
+
+    handleChangePq(event) {
+        this.setState({pq: event.target.value});
     }
 
     handleSubmit(event) {
-        alert('A name was submitted: ' + this.state.value);
         event.preventDefault();
+    }
+
+    handleCaptcha(value) {
+        alert(value);
+        this.setState({captcha: value});
     }
 
     render(){
@@ -48,11 +74,15 @@ class Recruit extends React.Component {
                             <div class="col-md-8">
                                 <div id="contactform">
                                     <form onSubmit={this.handleSubmit}>
-                                        <input type="text" name="name" placeholder="Nome do personagem" required/>
-                                        <input type="text" name="name" placeholder="Nome da família" required/>
+                                        <input type="text" name="nome" placeholder="Nome do personagem" required/>
+                                        <input type="text" name="familia" placeholder="Nome da família" required/>
                                         <input type="text" name="gs" placeholder="Gear Score (GS)" required/>
                                         <input type="text" name="classe" placeholder="Classe" required/>
                                         <textarea name="message" rows="7" placeholder="Por que você deseja se tornar membro da VALHALLA_TM?" required></textarea>
+                                        <ReCAPTCHA
+                                            sitekey="6LcaHKoUAAAAAPd2uc4l1MqpiCecD1Znx18aiYsF"
+                                            onChange={this.onChange}
+                                        />
                                         <input class="btn" type="submit" value="Send"/>
                                     </form>
                                 </div>
