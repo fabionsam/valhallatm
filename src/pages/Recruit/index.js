@@ -1,7 +1,6 @@
 import React from 'react';
 import Header from '../Header/index.js';
 import Footer from '../Footer/index.js';
-import recaptchaHelpers from '../helpers/recaptcha';
 import ReCAPTCHA from "react-google-recaptcha";
 
 class Recruit extends React.Component {
@@ -84,7 +83,7 @@ class Recruit extends React.Component {
                                             sitekey="6LcaHKoUAAAAAPd2uc4l1MqpiCecD1Znx18aiYsF"
                                             onChange={this.onChange}
                                         />
-                                        <input class="btn" type="submit" value="Send"/>
+                                        <input class="btn" type="submit" value="Send" disabled/>
                                     </form>
                                 </div>
                             </div>
