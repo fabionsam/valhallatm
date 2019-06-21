@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from '../Header/index.js';
 import Footer from '../Footer/index.js';
+import recaptchaHelpers from '../helpers/recaptcha';
 import ReCAPTCHA from "react-google-recaptcha";
 
 class Recruit extends React.Component {
@@ -42,7 +43,7 @@ class Recruit extends React.Component {
     }
 
     handleCaptcha(value) {
-        alert(value);
+        console.log(value);
         this.setState({captcha: value});
     }
 
