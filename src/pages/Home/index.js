@@ -10,7 +10,7 @@ const Home = () => (
                 <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-md-8">
-                    <h1 class="brand-heading">VALHALA_TM</h1>
+                    <h1 class="brand-heading">VALHALLA_TM</h1>
                     <p class="intro-text">
                         Guilda BlackDesert
                     </p>
@@ -56,53 +56,37 @@ const Home = () => (
             <div class="gallery">
                 <ul class="row">
                 <li class="col-md-3">
-                <a href="portfolio-item.html">
-                <img src="https://images.unsplash.com/photo-1504626835342-6b01071d182e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=975855d515c9d56352ee3bfe74287f2b&auto=format&fit=crop&w=750&q=80" alt=""></img>
-                </a>
+                <img src="https://media.discordapp.net/attachments/540356557066469386/552287200079773698/2019-03-04_94168545.JPG" alt=""></img>
                 </li>
                 
                 <li class="col-md-3">
-                <a href="portfolio-item.html">
-                <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=468a8c18f5d811cf03c654b653b5089e&auto=format&fit=crop&w=750&q=80" alt=""></img>
-                </a>
+                <img src="https://cdn.discordapp.com/attachments/540356557066469386/582579591441285130/2019-05-27_80160710.JPG" alt=""></img>
                 </li>
                 
                 <li class="col-md-3">
-                <a href="portfolio-item.html">
-                <img src="https://images.unsplash.com/photo-1415650328328-1909c4ceabdb?ixlib=rb-0.3.5&s=4cb4e1b2310aa5d2307eff04f113d5f0&auto=format&fit=crop&w=750&q=80" alt=""></img>
-                </a>
+                <img src="https://media.discordapp.net/attachments/540356557066469386/555947468857278474/2019-03-14_171860693.JPG" alt=""></img>
                 </li>
                 
                 
                 <li class="col-md-3">
-                <a href="portfolio-item.html">
-                <img src="https://images.unsplash.com/photo-1442850473887-0fb77cd0b337?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6b527796946e88db3a0ec912ebe1a613&auto=format&fit=crop&w=750&q=80" alt=""></img>
-                </a>
+                <img src="https://media.discordapp.net/attachments/540356557066469386/556727027890126848/2019-03-17_152500736.JPG" alt=""></img>
                 </li>
                 
                 <li class="col-md-3">
-                <a href="portfolio-item.html">
-                <img src="https://images.unsplash.com/photo-1495339647587-9021d80165d4?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=79a0f3149dfec84464e0506f5ccb9107&auto=format&fit=crop&w=750&q=80" alt=""></img>
-                </a>
+                <img src="https://cdn.discordapp.com/attachments/540356557066469386/556896491642290186/2019-03-17_193621224.JPG" alt=""></img>
                 </li>
                 
                 <li class="col-md-3">
-                <a href="portfolio-item.html">
-                <img src="https://images.unsplash.com/photo-1506852613309-def986635d7e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f8b18461ac8b3abab7e7188eb342d8e1&auto=format&fit=crop&w=750&q=80" alt=""></img>
-                </a>
+                <img src="https://cdn.discordapp.com/attachments/540356557066469386/544274901914353669/2019-02-10_601310550.JPG" alt=""></img>
                 </li>
                 
                 
                 <li class="col-md-3">
-                <a href="portfolio-item.html">
-                <img src="https://images.unsplash.com/photo-1430915860098-2e303ffb8276?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f46f45c52d542e4b7cba47f1709cc98c&auto=format&fit=crop&w=750&q=80" alt=""></img>
-                </a>
+                <img src="https://cdn.discordapp.com/attachments/540356557066469386/582024337037590537/2019-05-25_102940432.JPG" alt=""></img>
                 </li>
                 
                 <li class="col-md-3">
-                <a href="portfolio-item.html">
-                <img src="https://images.unsplash.com/photo-1430263431647-7bed9f792e72?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2f8e40576370da12b7f4c8c97f4a5044&auto=format&fit=crop&w=750&q=80" alt=""></img>
-                </a>
+                <img src="https://cdn.discordapp.com/attachments/540356557066469386/540358447028240398/2019-01-31_46070131.JPG" alt=""></img>
                 </li>		
 
                 </ul>
