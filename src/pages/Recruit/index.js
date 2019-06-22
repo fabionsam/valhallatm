@@ -106,16 +106,16 @@ class Recruit extends React.Component {
                                     <h2 class="brand-heading">{this.state.message}</h2>
                                     
                                     <form onSubmit={this.handleSubmit} style={this.state.message === "Enviado com sucesso! Entraremos em contato." ? { display : "none"} : {}}>
-                                        <input type="text" name="nome" placeholder="Nome do personagem" value={this.state.nome} onChange={this.handleChangeNome} required/>
-                                        <input type="text" name="familia" placeholder="Nome da família" value={this.state.familia} onChange={this.handleChangeFamilia} required/>
-                                        <input type="text" name="gs" placeholder="Gear Score (GS)" value={this.state.gs} onChange={this.handleChangeGs} required/>
+                                        <input type="text" name="nome" placeholder="NOME DO PERSONAGEM" value={this.state.nome} onChange={this.handleChangeNome} required/>
+                                        <input type="text" name="familia" placeholder="NOME DA FAMÍLIA" value={this.state.familia} onChange={this.handleChangeFamilia} required/>
+                                        <input type="text" name="gs" placeholder="GEAR SCORE (GS)" value={this.state.gs} onChange={this.handleChangeGs} required/>
                                         <Select
                                             value={this.state.classe}
                                             onChange={this.handleChangeClasse}
                                             options={options}
                                             placeholder="Classe"
                                         />
-                                        <textarea name="message" rows="7" value={this.state.pq} placeholder="Por que você deseja se tornar membro da VALHALLA_TM?" onChange={this.handleChangePq} required></textarea>
+                                        <textarea name="message" rows="7" value={this.state.pq} placeholder="POR QUE VOCÊ DESEJA SE TORNAR MEMBRO DA VALHALLA_TM?" onChange={this.handleChangePq} required></textarea>
                                         <ReCAPTCHA
                                             sitekey="6LcaHKoUAAAAAPd2uc4l1MqpiCecD1Znx18aiYsF"
                                             onChange={this.handleCaptcha}
