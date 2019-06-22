@@ -10,9 +10,9 @@ const Home = () => (
                 <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-md-8">
-                    <h1 class="brand-heading">THIS IS ARIES</h1>
+                    <h1 class="brand-heading">VALHALA_TM</h1>
                     <p class="intro-text">
-                        Free Template by WowThemes.net
+                        Guilda BlackDesert
                     </p>
                     <a href="#pageid" class="btn btn-circle page-scroll">
                     <i class="fa fa-angle-double-down animated"></i>
@@ -27,13 +27,26 @@ const Home = () => (
             <div class="container content-section text-center">
                 <div class="row justify-content-center">		
                 <div class="col-md-8">
-                        <h2 class="d-block">LIL' ABOUT ME</h2>
+                    <h2 class="d-block">Apresentação</h2>
                     <p>
-                    Praesent ac dignissim diam. Aliquam lobortis elit et sapien eleifend, at sollicitudin metus elementum. Morbi imperdiet id ipsum at tristique. Nam suscipit tristique sem, <a href="#">quis</a> laoreet leo. Maecenas eget ante ipsum.
+                        O principal intuito é jogar com amigos e se divertir.
+                        <br/>
+                        O principal requisito é ser ATIVO no GAME, GUILD e DISCORD.
+                        <p/>
+                        -- Comportamento:
+                        Foco PVP sem exagero na toxidade.
+                        <p/>
+                        <p/>
+                        -- Atividades da guild:
+                        GvG's<br/>
+                        Node war <br/>
+                        Siege.<br/>
+                        Guild boss, VELL e Seahunt.<br/>
+                        Salários até 5kk e payout referente.
                     </p>
-                    <p>
+                    {/* <p>
                     <a href="#" class="btnghost"><i class="fa fa-download"></i> Curriculum Vitae</a>
-                    </p>
+                    </p> */}
                 </div>
                 </div>
             </div>
@@ -101,13 +114,26 @@ const Home = () => (
             <div class="container content-section text-center">
                 <div class="row justify-content-center">
                 <div class="col-md-8">
-                    <h2>Author's Message</h2>
+                    {/* <h2>Apresentação</h2>
                     <p>
-                    If you like "Aries" template, we'd love to hear from you, whether it be feedback, thanks, new template ideas or even just to say hello, we welcome it all!
-                    </p>
-                    <p>
+                        O principal intuito é jogar com amigos e se divertir.
+
+                        O principal requisito é ser ATIVO no GAME, GUILD e DISCORD.
+
+                        -- Comportamento:
+                        Foco PVP sem exagero na toxidade.
+
+
+                        -- Atividades da guild:
+                        GvG's
+                        Node war 
+                        Siege.
+                        Guild boss, VELL e Seahunt.
+                        Salários até 5kk e payout referente.
+                    </p> */}
+                    {/* <p>
                     <i><a href="mailto:wowthemesnet@gmail.com" class="highlightlink">wowthemesnet@gmail.com</a></i>
-                    </p>
+                    </p> */}
                     <ul class="list-inline banner-social-buttons">
                             
                     {/* <li class="d-inline">

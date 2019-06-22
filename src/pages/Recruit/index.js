@@ -14,7 +14,7 @@ const options = [
     { value: 'Feiticeira', label: 'Feiticeira' },
     { value: 'Guerreiro', label: 'Guerreiro' },
     { value: 'Kunoichi', label: 'Kunoichi' },
-    { value: 'Lhan', label: 'Lhan' },
+    { value: 'Lahn', label: 'Lahn' },
     { value: 'Lutador', label: 'Lutador' },
     { value: 'Maehwa', label: 'Maehwa' },
     { value: 'Mago', label: 'Mago' },
@@ -85,9 +85,9 @@ class Recruit extends React.Component {
                         <div class="container">
                             <div class="row justify-content-center">
                                 <div class="col-md-8">
-                                    <h1 class="brand-heading">GET IN TOUCH</h1>
+                                    <h1 class="brand-heading">RECRUTAMENTO</h1>
                                     <p class="intro-text">
-                                        The contact form is Workin'!
+                                        Venha fazer parte da nossa família!
                                     </p>
                                     <a href="#pageid" class="btn btn-circle page-scroll">
                                     <i class="fa fa-angle-double-down animated"></i>
