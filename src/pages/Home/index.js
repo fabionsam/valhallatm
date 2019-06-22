@@ -82,7 +82,7 @@ const Home = () => (
                 
                 
                 <li class="col-md-3">
-                <img src="https://cdn.discordapp.com/attachments/540356557066469386/582024337037590537/2019-05-25_102940432.JPG" alt=""></img>
+                <img src="https://cdn.discordapp.com/attachments/584809883321368618/590348425548005376/2019-06-17_379448772.png" alt=""></img>
                 </li>
                 
                 <li class="col-md-3">
@@ -127,7 +127,11 @@ const Home = () => (
                     <li class="d-inline">
                     <a href="https://www.facebook.com/ValhallaTM/" target="_blank" class="btn btnghost btn-lg"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Facebook</span></a>
                     </li>
-                            
+
+                    <li class="d-inline">
+                    <a href="https://discord.gg/YYfzRtG" target="_blank" class="btn btnghost btn-lg"><i class="fab fa-discord"></i> <span class="network-name">Discord</span></a>
+                    </li>
+
                     {/* <li class="d-inline">
                     <a href="https://github.com/wowthemesnet/template-aries-bootstrap-html" class="btn btnghost btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
                     </li> */}

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+
 const Header = () => (
     <div id="Header">
         <head>
@@ -10,16 +11,15 @@ const Header = () => (
             <meta name="description" content=""></meta>
             <meta name="keywords" content=""></meta>
             <meta name="author" content=""></meta>
-            <title>Aries Free HTML Template</title>
+            <title></title>
             <link rel="shortcut icon" href="assets/img/favicon.ico"></link>
 
             
             {/* <link rel="stylesheet" href="assets/css/main.css"></link> */}
             
-            
             <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i|Open+Sans:300,300i,400,400i,700,700i" rel="stylesheet"></link>
-                
-            <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"></link>
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"></link>    
+            <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"></link>
                 
             {/* <link rel="stylesheet" href="assets/css/theme.css"></link> */}
             
@@ -28,7 +28,7 @@ const Header = () => (
         
         <nav class="navbar navbar-expand-md navbar-custom fixed-top">
             <div class="container">
-                <a class="navbar-brand" href="index.html">VALHALLA_TM</a>
+                <a class="navbar-brand" href="#">VALHALLA_TM</a>
                 <button class="navbar-light navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsDefault" aria-controls="navbarsDefault" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
