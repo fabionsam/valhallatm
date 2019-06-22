@@ -113,7 +113,7 @@ class Recruit extends React.Component {
                                             value={this.state.classe}
                                             onChange={this.handleChangeClasse}
                                             options={options}
-                                            placeholder="Classe"
+                                            placeholder="CLASSE"
                                         />
                                         <textarea name="message" rows="7" value={this.state.pq} placeholder="POR QUE VOCÊ DESEJA SE TORNAR MEMBRO DA VALHALLA_TM?" onChange={this.handleChangePq} required></textarea>
                                         <ReCAPTCHA
