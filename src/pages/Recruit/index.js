@@ -118,7 +118,7 @@ class Recruit extends React.Component {
                                         <textarea name="message" rows="7" value={this.state.pq} placeholder="Por que você deseja se tornar membro da VALHALLA_TM?" onChange={this.handleChangePq} required></textarea>
                                         <ReCAPTCHA
                                             sitekey="6LcaHKoUAAAAAPd2uc4l1MqpiCecD1Znx18aiYsF"
-                                            onChange={this.onChange}
+                                            onChange={this.handleCaptcha}
                                         />
                                         <p/>
                                         <input id="botaoEnviar" class="btn" type="submit" value="Enviar" disabled={this.state.captcha === '' || this.state.classe === ''}/>
