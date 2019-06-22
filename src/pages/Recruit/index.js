@@ -121,7 +121,7 @@ class Recruit extends React.Component {
                                             onChange={this.onChange}
                                         />
                                         <p/>
-                                        <input id="botaoEnviar" class="btn" type="submit" value="Enviar" disabled={!this.state.captcha || this.state.classe === ''}/>
+                                        <input id="botaoEnviar" class="btn" type="submit" value="Enviar" disabled={this.state.captcha === '' || this.state.classe === ''}/>
                                     </form>
                                 </div>
                             </div>
