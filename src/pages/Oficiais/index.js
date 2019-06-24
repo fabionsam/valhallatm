@@ -2,7 +2,7 @@ import React from 'react';
 import Header from '../Header/index.js';
 import Footer from '../Footer/index.js';
 
-const Home = () => (
+const Oficiais = () => (
     <div id="Home">
         < Header/>
         <div class="intro">
@@ -68,29 +68,29 @@ const Home = () => (
                 </li>
                 
                 <li class="col-md-3">
-                <img src={process.env.PUBLIC_URL + "/img/2019-03-14_171860693.jfif"} alt=""></img>
+                <img src="https://media.discordapp.net/attachments/540356557066469386/555947468857278474/2019-03-14_171860693.JPG" alt=""></img>
                 </li>
                 
                 
                 <li class="col-md-3">
-                <img src={process.env.PUBLIC_URL + "/img/2019-03-17_152500736.jfif"} alt=""></img>
+                <img src="https://media.discordapp.net/attachments/540356557066469386/556727027890126848/2019-03-17_152500736.JPG" alt=""></img>
                 </li>
                 
                 <li class="col-md-3">
-                <img src={process.env.PUBLIC_URL + "/img/2019-03-17_193621224.jfif"} alt=""></img>
+                <img src="https://cdn.discordapp.com/attachments/540356557066469386/556896491642290186/2019-03-17_193621224.JPG" alt=""></img>
                 </li>
                 
                 <li class="col-md-3">
-                <img src={process.env.PUBLIC_URL + "/img/2019-02-10_601310550.jfif"} alt=""></img>
+                <img src="https://cdn.discordapp.com/attachments/540356557066469386/544274901914353669/2019-02-10_601310550.JPG" alt=""></img>
                 </li>
                 
                 
                 <li class="col-md-3">
-                <img src={process.env.PUBLIC_URL + "/img/2019-06-17_379448772.png"} alt=""></img>
+                <img src="https://cdn.discordapp.com/attachments/584809883321368618/590348425548005376/2019-06-17_379448772.png" alt=""></img>
                 </li>
                 
                 <li class="col-md-3">
-                <img src={process.env.PUBLIC_URL + "/img/2019-01-31_46070131.jfif"} alt=""></img>
+                <img src="https://cdn.discordapp.com/attachments/540356557066469386/540358447028240398/2019-01-31_46070131.JPG" alt=""></img>
                 </li>		
 
                 </ul>
@@ -151,4 +151,4 @@ const Home = () => (
 );
 
 
-export default Home;
+export default Oficiais;

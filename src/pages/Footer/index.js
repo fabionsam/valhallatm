@@ -8,10 +8,7 @@ const Footer = () => (
                 Copyright &copy; VALHALLA_TM 2019<br/>
             </p>
         </div>
-        </footer>
-        <script src="assets/js/main.js"></script>
-
-        <script src="assets/js/theme.js"></script>            
+        </footer>      
     </div>
 );
 

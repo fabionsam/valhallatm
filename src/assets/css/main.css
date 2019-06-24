@@ -5375,6 +5375,16 @@ button.bg-dark:hover {
       -ms-flex-pack: center !important;
           justify-content: center !important; }
 
+.justify-content-left {
+  -webkit-box-pack: left !important;
+      -ms-flex-pack: left !important;
+          justify-content: left !important; }
+
+.justify-content-right {
+  -webkit-box-pack: right !important;
+      -ms-flex-pack: right !important;
+          justify-content: right !important; }
+
 .justify-content-between {
   -webkit-box-pack: justify !important;
       -ms-flex-pack: justify !important;
