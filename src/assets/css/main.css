@@ -3119,6 +3119,12 @@ tbody.collapse.show {
 .custom-checkbox .custom-control-label::before {
   border-radius: 0.25rem; }
 
+.linha-vertical {
+  height: 300px;/*Altura da linha*/
+  border-left: 2px solid;/* Adiciona borda esquerda na div como ser fosse uma linha.*/
+  margin-top: 5%;
+}
+
 .custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
   background-color: #007bff; }
 

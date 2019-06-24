@@ -26,8 +26,8 @@ const Home = () => (
         <section id="pageid">
             <div class="container content-section text-center">
                 <h2 class="d-block">Apresentação</h2>
-                <div class="row justify-content-left">		
-                    <div class="col-md-8" style={{textAlign: "left"}}>
+                <div class="row justify-content-center">		
+                    <div class="col-md-6" style={{textAlign: "left", marginRight: "-50px"}}>
                         <p/>
                         <br/>
                         O principal intuito é jogar com amigos e se divertir.
@@ -48,8 +48,9 @@ const Home = () => (
                         <a href="#" class="btnghost"><i class="fa fa-download"></i> Curriculum Vitae</a>
                         </p> */}
                     </div>
-                    <div class="row justify-content-right">	
-                        <li style={{"position": "relative", "top": "50%" }} class="d-inline">
+                    <div class="linha-vertical"></div>
+                    <div class="row justify-content-right" style={{marginLeft: "30px"}}>	
+                        <li style={{"position": "relative", "top": "42%" }} class="d-inline">
                             <a href={process.env.PUBLIC_URL + "/img/HABILIDADESCOMPLETAS.jpg"} data-lightbox="image-1" class="btn btnghost btn-lg"><img src={process.env.PUBLIC_URL + "/img/btn_habilidade.png"}></img> <span class="network-name">Habilidades da Guilda</span></a>
                         </li>
                     </div>
