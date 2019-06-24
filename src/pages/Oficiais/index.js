@@ -2,16 +2,22 @@ import React from 'react';
 import Header from '../Header/index.js';
 import Footer from '../Footer/index.js';
 import '../../assets/css/fsbanner.css';
+import * as $ from 'jquery';
 
 class Oficiais extends React.Component {
     componentDidMount(){
-        const script = document.createElement("script");
-    
+        var script = document.createElement("script");
         script.innerText = "$('#fsslider').fsBanner({'showName':true, 'toUpdate':{}, 'whenEmpty':{}, 'trigger':'click', 'hideParent':null, 'onChanged':null });";
         script.async = true;
-    
         document.body.appendChild(script);
-      }
+
+        script = document.createElement("script");
+        script.src = process.env.PUBLIC_URL + "/js/theme.js"; 
+        script.async = true;
+        document.body.appendChild(script);
+
+        $('html,body').scrollTop(0);
+    }
 
     render(){
         return(

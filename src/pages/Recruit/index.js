@@ -4,6 +4,7 @@ import Footer from '../Footer/index.js';
 import ReCAPTCHA from "react-google-recaptcha";
 import Select from 'react-select';
 import api from '../../services/api.js';
+import * as $ from 'jquery';
 
 const options = [
     { value: 'Arqueiro', label: 'Arqueiro' },
@@ -38,6 +39,15 @@ class Recruit extends React.Component {
         this.handleChangePq = this.handleChangePq.bind(this);
         this.handleCaptcha = this.handleCaptcha.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    componentDidMount(){
+        var script = document.createElement("script");
+        script.src = process.env.PUBLIC_URL + "/js/theme.js"; 
+        script.async = true;
+        document.body.appendChild(script);
+
+        $('html,body').scrollTop(0);
     }
 
     handleChangeNome(event) {
