@@ -769,6 +769,9 @@ pre {
   @media (min-width: 1200px) {
     .container {
       max-width: 1140px; } }
+  @media (min-width: 1300px) {
+    .container {
+      max-width: 1260px; } }
 
 .container-fluid {
   width: 100%;
@@ -7232,6 +7235,10 @@ html {
   @media (min-width: 1200px) {
     .container {
       max-width: 1140px; } }
+  @media (min-width: 1300px) {
+    .container {
+      max-width: 1260px; } }
+    
 
 .container-fluid {
   width: 100%;

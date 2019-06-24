@@ -46,11 +46,29 @@ class Oficiais extends React.Component {
                             <div style={{"background-image":"url(" + process.env.PUBLIC_URL + "/img/oficiais/meridah.jfif)"}}>
                                 <span class="name">MeridaH</span>
                             </div>
+                            <div style={{"background-image":"url(" + process.env.PUBLIC_URL + "/img/oficiais/dedo.jpg)"}}>
+                                <span class="name">BichoGrilo</span>
+                            </div>
                             <div style={{"background-image":"url(" + process.env.PUBLIC_URL + "/img/oficiais/sevilha.jfif)"}}>
-                                <span class="name">Sevilha</span>
+                                <span class="name">Sevilhx</span>
                             </div>
                             <div style={{"background-image":"url(" + process.env.PUBLIC_URL + "/img/oficiais/fabionsam.jfif)"}}>
                                 <span class="name">Delphi</span>
+                            </div>
+                            <div style={{"background-image":"url(" + process.env.PUBLIC_URL + "/img/oficiais/djali.jfif)"}}>
+                                <span class="name">Djali</span>
+                            </div>
+                            <div style={{"background-image":"url(" + process.env.PUBLIC_URL + "/img/oficiais/gillroy.png)"}}>
+                                <span class="name">Gillroy</span>
+                            </div>
+                            <div style={{"background-image":"url(" + process.env.PUBLIC_URL + "/img/oficiais/metal.png)"}}>
+                                <span class="name">IMetal</span>
+                            </div>
+                            <div style={{"background-image":"url(" + process.env.PUBLIC_URL + "/img/oficiais/syruni.png)"}}>
+                                <span class="name">YojimboHyun</span>
+                            </div>
+                            <div style={{"background-image":"url(" + process.env.PUBLIC_URL + "/img/oficiais/ajax.jpg)"}}>
+                                <span class="name">Frenetic</span>
                             </div>
                         </div>
                     </div>
