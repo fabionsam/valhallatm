@@ -27,13 +27,14 @@ const Home = () => (
             <div class="container content-section text-center">
                 <h2 class="d-block">Apresentação</h2>
                 <div class="row justify-content-left">		
-                    <div class="col-md-8">
+                    <div class="col-md-8" style={{textAlign: "left"}}>
                         <p/>
+                        <br/>
                         O principal intuito é jogar com amigos e se divertir.
                         <br/>
                         O principal requisito é ser ATIVO no GAME, GUILD e DISCORD.
                         <p/>
-                        -- Comportamento:
+                        -- Comportamento:<br/>
                         Foco PVP sem exagero na toxicidade.
                         <p/>
                         <p/>
