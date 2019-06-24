@@ -40,6 +40,7 @@ class Home extends React.Component{
                         <h2 class="d-block">Apresentação</h2>
                         <div class="row justify-content-center">		
                             <div class="col-md-6" style={{textAlign: "left", marginRight: "-50px"}}>
+                                <b>
                                 <p/>
                                 <br/>
                                 O principal intuito é jogar com amigos e se divertir.
@@ -59,6 +60,7 @@ class Home extends React.Component{
                                 {/* <p>
                                 <a href="#" class="btnghost"><i class="fa fa-download"></i> Curriculum Vitae</a>
                                 </p> */}
+                                </b>
                             </div>
                             <div class="linha-vertical"></div>
                             <div class="row justify-content-right" style={{marginLeft: "30px"}}>	
