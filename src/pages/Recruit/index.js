@@ -99,7 +99,7 @@ class Recruit extends React.Component {
                     </div>
                 </div>
 
-                <section id="pageid">
+                <section id="pageid" style={{backgroundImage: "url(" + process.env.PUBLIC_URL + "/img/marmorebranco.jpg)"}}>
                     <div class="container content-section">
                         <div class="row justify-content-center">
                             <div class="col-md-8">

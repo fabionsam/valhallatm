@@ -23,7 +23,7 @@ const Home = () => (
             </div>
         </div>
                     
-        <section id="pageid">
+        <section id="pageid" style={{backgroundImage: "url(" + process.env.PUBLIC_URL + "/img/marmorebranco.jpg)"}}>
             <div class="container content-section text-center">
                 <h2 class="d-block">Apresentação</h2>
                 <div class="row justify-content-center">		
@@ -100,50 +100,20 @@ const Home = () => (
         </section>
                 
 
-        <section id="contact">
+        <section id="contact" style={{backgroundImage: "url(" + process.env.PUBLIC_URL + "/img/marmorebranco.jpg)"}}>
             <div class="container content-section text-center">
                 <div class="row justify-content-center">
-                <div class="col-md-8">
-                    {/* <h2>Apresentação</h2>
-                    <p>
-                        O principal intuito é jogar com amigos e se divertir.
+                    <div class="col-md-8">
+                        <ul class="list-inline banner-social-buttons">       
+                            <li class="d-inline">
+                            <a href="https://www.facebook.com/ValhallaTM/" target="_blank" class="btn btnghost btn-lg"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Facebook</span></a>
+                            </li>
 
-                        O principal requisito é ser ATIVO no GAME, GUILD e DISCORD.
-
-                        -- Comportamento:
-                        Foco PVP sem exagero na toxidade.
-
-
-                        -- Atividades da guild:
-                        GvG's
-                        Node war 
-                        Siege.
-                        Guild boss, VELL e Seahunt.
-                        Salários até 5kk e payout referente.
-                    </p> */}
-                    {/* <p>
-                    <i><a href="mailto:wowthemesnet@gmail.com" class="highlightlink">wowthemesnet@gmail.com</a></i>
-                    </p> */}
-                    <ul class="list-inline banner-social-buttons">
-                            
-                    {/* <li class="d-inline">
-                    <a href="https://twitter.com/wowthemesnet" class="btn btnghost btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-                    </li> */}
-                            
-                    <li class="d-inline">
-                    <a href="https://www.facebook.com/ValhallaTM/" target="_blank" class="btn btnghost btn-lg"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Facebook</span></a>
-                    </li>
-
-                    <li class="d-inline">
-                    <a href="https://discord.gg/YYfzRtG" target="_blank" class="btn btnghost btn-lg"><i class="fab fa-discord"></i> <span class="network-name">Discord</span></a>
-                    </li>
-
-                    {/* <li class="d-inline">
-                    <a href="https://github.com/wowthemesnet/template-aries-bootstrap-html" class="btn btnghost btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
-                    </li> */}
-                            
-                    </ul>
-                </div>
+                            <li class="d-inline">
+                            <a href="https://discord.gg/YYfzRtG" target="_blank" class="btn btnghost btn-lg"><i class="fab fa-discord"></i> <span class="network-name">Discord</span></a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
