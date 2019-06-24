@@ -13,7 +13,6 @@
 	<script src="%PUBLIC_URL%/js/jquery-3.4.1.min.js"></script>
 	<script src="%PUBLIC_URL%/js/main.js"></script>
 	<script src="%PUBLIC_URL%/js/theme.js"></script>
-	<script src="%PUBLIC_URL%/js/lightbox/lightbox.min.js"></script>
 	<script src="%PUBLIC_URL%/js/fsbanner.js"></script>
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
@@ -40,28 +39,4 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   </body>
-  <script>
-	$('#demo').fsBanner({
-
-	  // show image descriptions
-	  'showName':true,  
-
-	  // up<a href="https://www.jqueryscript.net/time-clock/">date</a> other slides
-	  'toUpdate':{},
-
-	  // set default values for slides
-	  'whenEmpty':{},
-
-	  // or 'mouse'
-	  'trigger':'click', 
-
-	  // If set, the whenEmpty option will be ignored. 
-	  // When there is no banner and hideParent is set, the script will hide the element based on the selector passed.
-	  'hideParent':null,
-
-	  // callback
-	  'onChanged':null
-	  
-	});
-  </script>
 </html>
