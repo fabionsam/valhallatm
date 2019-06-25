@@ -39,7 +39,7 @@ class Home extends React.Component{
                     <div class="container content-section text-center">
                         <h2 class="d-block">Apresentação</h2>
                         <div class="row justify-content-center">		
-                            <div class="col-md-6" style={{textAlign: "left", marginRight: "-50px"}}>
+                            <div class="col-md-6" style={{textAlign: "left", marginRight: "-10px"}}>
                                 <b>
                                 <p/>
                                 <br/>
@@ -63,9 +63,9 @@ class Home extends React.Component{
                                 </b>
                             </div>
                             <div class="linha-vertical"></div>
-                            <div class="row justify-content-right" style={{marginLeft: "30px"}}>	
+                            <div class="row justify-content-right" style={{marginLeft: "20%"}}>	
                                 <li style={{"position": "relative", "top": "42%" }} class="d-inline">
-                                    <a href={process.env.PUBLIC_URL + "/img/HABILIDADESCOMPLETAS.jpg"} data-lightbox="image-1" class="btn btnghost btn-lg"><img src={process.env.PUBLIC_URL + "/img/btn_habilidade.png"}></img> <span class="network-name">Habilidades da Guilda</span></a>
+                                    <a href={process.env.PUBLIC_URL + "/img/HABILIDADESCOMPLETAS.jpg"} data-lightbox="habilidades" class="btn btnghost btn-lg"><img src={process.env.PUBLIC_URL + "/img/btn_habilidade.png"}></img> <span class="network-name">Habilidades da Guilda</span></a>
                                 </li>
                             </div>
                         </div>
@@ -76,37 +76,37 @@ class Home extends React.Component{
                     <div class="gallery">
                         <ul class="row">
                         <li class="col-md-3">
-                        <img src={process.env.PUBLIC_URL + "/img/2019-03-04_94168545.jfif"} alt=""></img>
+                        <a href={process.env.PUBLIC_URL + "/img/2019-03-04_94168545.jfif"} data-lightbox="guildimages"><img src={process.env.PUBLIC_URL + "/img/2019-03-04_94168545.jfif"} alt=""></img></a>
                         </li>
                         
                         <li class="col-md-3">
-                        <img src={process.env.PUBLIC_URL + "/img/2019-05-27_80160710.jfif"} alt=""></img>
+                        <a href={process.env.PUBLIC_URL + "/img/2019-05-27_80160710.jfif"} data-lightbox="guildimages"><img src={process.env.PUBLIC_URL + "/img/2019-05-27_80160710.jfif"} alt=""></img></a>
                         </li>
                         
                         <li class="col-md-3">
-                        <img src={process.env.PUBLIC_URL + "/img/2019-03-14_171860693.jfif"} alt=""></img>
+                        <a href={process.env.PUBLIC_URL + "/img/2019-03-14_171860693.jfif"} data-lightbox="guildimages"><img src={process.env.PUBLIC_URL + "/img/2019-03-14_171860693.jfif"} alt=""></img></a>
                         </li>
                         
                         
                         <li class="col-md-3">
-                        <img src={process.env.PUBLIC_URL + "/img/2019-03-17_152500736.jfif"} alt=""></img>
+                        <a href={process.env.PUBLIC_URL + "/img/2019-03-17_152500736.jfif"} data-lightbox="guildimages"><img src={process.env.PUBLIC_URL + "/img/2019-03-17_152500736.jfif"} alt=""></img></a>
                         </li>
                         
                         <li class="col-md-3">
-                        <img src={process.env.PUBLIC_URL + "/img/2019-03-17_193621224.jfif"} alt=""></img>
+                        <a href={process.env.PUBLIC_URL + "/img/2019-03-17_193621224.jfif"} data-lightbox="guildimages"><img src={process.env.PUBLIC_URL + "/img/2019-03-17_193621224.jfif"} alt=""></img></a>
                         </li>
                     
                         <li class="col-md-3">
-                        <img src={process.env.PUBLIC_URL + "/img/2019-02-10_601310550.jfif"} alt=""></img>
+                        <a href={process.env.PUBLIC_URL + "/img/2019-02-10_601310550.jfif"} data-lightbox="guildimages"><img src={process.env.PUBLIC_URL + "/img/2019-02-10_601310550.jfif"} alt=""></img></a>
                         </li>
                         
                         
                         <li class="col-md-3">
-                        <img src={process.env.PUBLIC_URL + "/img/2019-06-17_379448772.png"} alt=""></img>
+                        <a href={process.env.PUBLIC_URL + "/img/2019-06-17_379448772.png"} data-lightbox="guildimages"><img src={process.env.PUBLIC_URL + "/img/2019-06-17_379448772.png"} alt=""></img></a>
                         </li>
                         
                         <li class="col-md-3">
-                        <img src={process.env.PUBLIC_URL + "/img/2019-01-31_46070131.jfif"} alt=""></img>
+                        <a href={process.env.PUBLIC_URL + "/img/2019-01-31_46070131.jfif"} data-lightbox="guildimages"><img src={process.env.PUBLIC_URL + "/img/2019-01-31_46070131.jfif"} alt=""></img></a>
                         </li>		
 
                         </ul>

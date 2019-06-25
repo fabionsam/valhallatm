@@ -19,6 +19,8 @@ html {
   -ms-overflow-style: scrollbar;
   -webkit-tap-highlight-color: transparent; }
 
+/* HTML,BODY{cursor: url("http://downloads.totallyfreecursors.com/cursor_files/firered.ani"), url("http://downloads.totallyfreecursors.com/thumbnails/firered.gif"), auto;} */
+
 @-ms-viewport {
   width: device-width; }
 
@@ -772,6 +774,9 @@ pre {
   @media (min-width: 1300px) {
     .container {
       max-width: 1260px; } }
+  @media (min-width: 1800px) {
+    .container {
+      max-width: 1740px; } }
 
 .container-fluid {
   width: 100%;
@@ -7238,7 +7243,9 @@ html {
   @media (min-width: 1300px) {
     .container {
       max-width: 1260px; } }
-    
+  @media (min-width: 1800px) {
+    .container {
+      max-width: 1740px; } }
 
 .container-fluid {
   width: 100%;
