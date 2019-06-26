@@ -4,21 +4,29 @@ import Footer from '../Footer/index.js';
 import Recruit from '../Recruit/index.js';
 
 class Home extends React.Component{
+    componentDidMount(){
+        window.$('.multiple-items').slick({
+            infinite: false,
+            slidesToShow: 3,
+            slidesToScroll: 3
+        });
+    }
+
     render(){
         return(
             <div id="Home">
                 < Header/>
                 < Recruit/>
                 <div id="divCabecalho">
-                    <div id="contentCabecalho" class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-md-8">
+                    <div id="contentCabecalho" className="container">
+                        <div className="row justify-content-center">
+                            <div className="col">
                                 <h1>VALHALLA_TM</h1>
                                 <h3>Junte-se a nós</h3>
                                 <h4>Node war e sea hunt</h4>
                                 <h4>Sem restrição de GS</h4>
                                 
-                                <button type="button" style={{"margin-top": "15px"}} class="btn btn-valhalla" data-toggle="modal" data-target="#ExemploModalCentralizado">
+                                <button type="button" style={{marginTop: "15px"}} className="btn btn-valhalla" data-toggle="modal" data-target="#ExemploModalCentralizado">
                                     Recrutamento
                                 </button><br/><br/>
                                 <a href="https://www.twitch.tv/meridah_" rel="noopener noreferrer" target="_blank"><img alt="" src={process.env.PUBLIC_URL+"/images/discord.png"}></img></a>
@@ -27,20 +35,20 @@ class Home extends React.Component{
                         </div>
                     </div>
                 </div>
-                <div id="divSobre" style={{"background-image": "url("+process.env.PUBLIC_URL+"/images/papel.jpg)"}}>
-                    <div class="containerQuemSomos container.col-md- width-85">
-                        <div class="row">
-                            <div class="divTituloSobre col-auto">
+                <div id="divSobre" style={{backgroundImage: "url("+process.env.PUBLIC_URL+"/images/papel.jpg)"}}>
+                    <div className="containerQuemSomos container.col-md- width-85">
+                        <div className="row">
+                            <div className="divTituloSobre col-auto">
                                 <h2>Quem Somos</h2>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="divTituloSobre col">
-                                <div class="conteudoQuemSomos">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-auto">
-                                                <div class="imgEspada">
+                        <div className="row">
+                            <div className="divTituloSobre col">
+                                <div className="conteudoQuemSomos">
+                                    <div className="container">
+                                        <div className="row">
+                                            <div className="col-auto">
+                                                <div className="imgEspada">
                                                     <svg preserveAspectRatio="xMidYMid meet" data-bbox="32.001 32 135.998 136.002" viewBox="32.001 32 135.998 136.002" height="100%" width="100%" xmlns="http://www.w3.org/2000/svg" data-type="color" role="img">
                                                         <g>
                                                             <path d="M165.446 40.54l-5.982-5.982A8.676 8.676 0 0 0 153.29 32a8.676 8.676 0 0 0-6.174 2.558L123.98 57.693l-3.709-3.709a11.282 11.282 0 0 0-3.299-7.197 11.378 11.378 0 0 0-8.1-3.356c-3.06 0-5.937 1.192-8.1 3.356-4.467 4.466-4.467 11.733 0 16.199a11.277 11.277 0 0 0 7.197 3.299l3.709 3.709L84.95 96.721c-9.107-5.441-15.011-14.084-15.092-14.205a2.852 2.852 0 0 0-4.742 3.166c.511.767 12.727 18.805 30.823 20.887 15.763 1.812 24.621 24.985 24.708 25.219a2.856 2.856 0 0 0 2.672 1.852c.331 0 .668-.059.997-.182a2.847 2.847 0 0 0 1.673-3.665c-.289-.775-5.324-13.972-15.145-22.306l19.164-19.162 3.709 3.709a11.287 11.287 0 0 0 3.299 7.198 11.423 11.423 0 0 0 8.1 3.348c2.934 0 5.866-1.116 8.099-3.349a11.378 11.378 0 0 0 3.356-8.1c0-3.06-1.192-5.937-3.356-8.1a11.287 11.287 0 0 0-7.196-3.299l-3.709-3.709 23.135-23.134c3.406-3.405 3.406-8.944.001-12.349z" fill="#2F2D56" data-color="1"></path>
@@ -55,11 +63,11 @@ class Home extends React.Component{
                                                     </svg>							
                                                 </div>
                                             </div>
-                                            <div class="divTextoQuemSomos col">
+                                            <div className="divTextoQuemSomos col">
                                                 <br/>
                                                 <br/>
-                                                <p class="tituloQuemSomos">Diversa</p>
-                                                <p class="textoQuemSomos">
+                                                <p className="tituloQuemSomos">Diversa</p>
+                                                <p className="textoQuemSomos">
                                                     Não aceitamos qualquer tipo de discriminação.<br/>
                                                     Respeita as minas e as monas!
                                                 </p>
@@ -68,12 +76,12 @@ class Home extends React.Component{
                                     </div>
                                 </div>
                             </div>
-                            <div class="divSobre col">
-                                <div class="conteudoQuemSomos">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-auto">
-                                                <div class="imgEspada">
+                            <div className="divSobre col">
+                                <div className="conteudoQuemSomos">
+                                    <div className="container">
+                                        <div className="row">
+                                            <div className="col-auto">
+                                                <div className="imgEspada">
                                                     <svg preserveAspectRatio="xMidYMid meet" data-bbox="32.001 32 135.998 136.002" viewBox="32.001 32 135.998 136.002" height="100%" width="100%" xmlns="http://www.w3.org/2000/svg" data-type="color" role="img">
                                                         <g>
                                                             <path d="M165.446 40.54l-5.982-5.982A8.676 8.676 0 0 0 153.29 32a8.676 8.676 0 0 0-6.174 2.558L123.98 57.693l-3.709-3.709a11.282 11.282 0 0 0-3.299-7.197 11.378 11.378 0 0 0-8.1-3.356c-3.06 0-5.937 1.192-8.1 3.356-4.467 4.466-4.467 11.733 0 16.199a11.277 11.277 0 0 0 7.197 3.299l3.709 3.709L84.95 96.721c-9.107-5.441-15.011-14.084-15.092-14.205a2.852 2.852 0 0 0-4.742 3.166c.511.767 12.727 18.805 30.823 20.887 15.763 1.812 24.621 24.985 24.708 25.219a2.856 2.856 0 0 0 2.672 1.852c.331 0 .668-.059.997-.182a2.847 2.847 0 0 0 1.673-3.665c-.289-.775-5.324-13.972-15.145-22.306l19.164-19.162 3.709 3.709a11.287 11.287 0 0 0 3.299 7.198 11.423 11.423 0 0 0 8.1 3.348c2.934 0 5.866-1.116 8.099-3.349a11.378 11.378 0 0 0 3.356-8.1c0-3.06-1.192-5.937-3.356-8.1a11.287 11.287 0 0 0-7.196-3.299l-3.709-3.709 23.135-23.134c3.406-3.405 3.406-8.944.001-12.349z" fill="#2F2D56" data-color="1"></path>
@@ -88,11 +96,11 @@ class Home extends React.Component{
                                                     </svg>							
                                                 </div>
                                             </div>
-                                            <div class="divTextoQuemSomos col">
+                                            <div className="divTextoQuemSomos col">
                                                 <br/>
                                                 <br/>
-                                                <p class="tituloQuemSomos">Amigável</p>
-                                                <p class="textoQuemSomos">
+                                                <p className="tituloQuemSomos">Amigável</p>
+                                                <p className="textoQuemSomos">
                                                     Aqui ninguém é obrigado a nada. Todos colaboram como podem e como se sentem confortáveis.
                                                 </p>
                                             </div>
@@ -100,12 +108,12 @@ class Home extends React.Component{
                                     </div>
                                 </div>
                             </div>
-                            <div class="divSobre col">
-                                <div class="conteudoQuemSomos">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-auto">
-                                                <div class="imgEspada">
+                            <div className="divSobre col">
+                                <div className="conteudoQuemSomos">
+                                    <div className="container">
+                                        <div className="row">
+                                            <div className="col-auto">
+                                                <div className="imgEspada">
                                                     <svg preserveAspectRatio="xMidYMid meet" data-bbox="32.001 32 135.998 136.002" viewBox="32.001 32 135.998 136.002" height="100%" width="100%" xmlns="http://www.w3.org/2000/svg" data-type="color" role="img">
                                                         <g>
                                                             <path d="M165.446 40.54l-5.982-5.982A8.676 8.676 0 0 0 153.29 32a8.676 8.676 0 0 0-6.174 2.558L123.98 57.693l-3.709-3.709a11.282 11.282 0 0 0-3.299-7.197 11.378 11.378 0 0 0-8.1-3.356c-3.06 0-5.937 1.192-8.1 3.356-4.467 4.466-4.467 11.733 0 16.199a11.277 11.277 0 0 0 7.197 3.299l3.709 3.709L84.95 96.721c-9.107-5.441-15.011-14.084-15.092-14.205a2.852 2.852 0 0 0-4.742 3.166c.511.767 12.727 18.805 30.823 20.887 15.763 1.812 24.621 24.985 24.708 25.219a2.856 2.856 0 0 0 2.672 1.852c.331 0 .668-.059.997-.182a2.847 2.847 0 0 0 1.673-3.665c-.289-.775-5.324-13.972-15.145-22.306l19.164-19.162 3.709 3.709a11.287 11.287 0 0 0 3.299 7.198 11.423 11.423 0 0 0 8.1 3.348c2.934 0 5.866-1.116 8.099-3.349a11.378 11.378 0 0 0 3.356-8.1c0-3.06-1.192-5.937-3.356-8.1a11.287 11.287 0 0 0-7.196-3.299l-3.709-3.709 23.135-23.134c3.406-3.405 3.406-8.944.001-12.349z" fill="#2F2D56" data-color="1"></path>
@@ -120,11 +128,11 @@ class Home extends React.Component{
                                                     </svg>							
                                                 </div>
                                             </div>
-                                            <div class="divTextoQuemSomos col">
+                                            <div className="divTextoQuemSomos col">
                                                 <br/>
                                                 <br/>
-                                                <p class="tituloQuemSomos">Atividades da Guilda</p>
-                                                <p class="textoQuemSomos">
+                                                <p className="tituloQuemSomos">Atividades da Guilda</p>
+                                                <p className="textoQuemSomos">
                                                     Foco em Node War e Sea Hunt, com Eventos Únicos, PVP Massivo, PVE e Life Skill
                                                 </p>
                                             </div>
@@ -132,12 +140,12 @@ class Home extends React.Component{
                                     </div>
                                 </div>
                             </div>
-                            <div class="divSobre col">
-                                <div class="conteudoQuemSomos">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-auto">
-                                                <div class="imgEspada">
+                            <div className="divSobre col">
+                                <div className="conteudoQuemSomos">
+                                    <div className="container">
+                                        <div className="row">
+                                            <div className="col-auto">
+                                                <div className="imgEspada">
                                                     <svg preserveAspectRatio="xMidYMid meet" data-bbox="32.001 32 135.998 136.002" viewBox="32.001 32 135.998 136.002" height="100%" width="100%" xmlns="http://www.w3.org/2000/svg" data-type="color" role="img">
                                                         <g>
                                                             <path d="M165.446 40.54l-5.982-5.982A8.676 8.676 0 0 0 153.29 32a8.676 8.676 0 0 0-6.174 2.558L123.98 57.693l-3.709-3.709a11.282 11.282 0 0 0-3.299-7.197 11.378 11.378 0 0 0-8.1-3.356c-3.06 0-5.937 1.192-8.1 3.356-4.467 4.466-4.467 11.733 0 16.199a11.277 11.277 0 0 0 7.197 3.299l3.709 3.709L84.95 96.721c-9.107-5.441-15.011-14.084-15.092-14.205a2.852 2.852 0 0 0-4.742 3.166c.511.767 12.727 18.805 30.823 20.887 15.763 1.812 24.621 24.985 24.708 25.219a2.856 2.856 0 0 0 2.672 1.852c.331 0 .668-.059.997-.182a2.847 2.847 0 0 0 1.673-3.665c-.289-.775-5.324-13.972-15.145-22.306l19.164-19.162 3.709 3.709a11.287 11.287 0 0 0 3.299 7.198 11.423 11.423 0 0 0 8.1 3.348c2.934 0 5.866-1.116 8.099-3.349a11.378 11.378 0 0 0 3.356-8.1c0-3.06-1.192-5.937-3.356-8.1a11.287 11.287 0 0 0-7.196-3.299l-3.709-3.709 23.135-23.134c3.406-3.405 3.406-8.944.001-12.349z" fill="#2F2D56" data-color="1"></path>
@@ -152,11 +160,11 @@ class Home extends React.Component{
                                                     </svg>							
                                                 </div>
                                             </div>
-                                            <div class="divTextoQuemSomos col">
+                                            <div className="divTextoQuemSomos col">
                                                 <br/>
                                                 <br/>
-                                                <p class="tituloQuemSomos">Divertida</p>
-                                                <p class="textoQuemSomos">
+                                                <p className="tituloQuemSomos">Divertida</p>
+                                                <p className="textoQuemSomos">
                                                     Nós passamos o tempo juntos. No nosso discord, na arena livre, fazendo quests, GVG e uma infinidade de outras atividades.
                                                 </p>
                                             </div>
@@ -166,9 +174,9 @@ class Home extends React.Component{
                             </div>
                         </div>
                     </div>
-                    <div class="containerQuemSomos container width-15">
-                        <div class="row align-items-center height-50">
-                            <div class="col-auto divImgSobre">
+                    <div className="containerQuemSomos container width-15">
+                        <div className="row align-items-center height-50">
+                            <div className="col-auto divImgSobre">
                                 <a href="" rel="noopener noreferrer" target="_self">
                                     <div>
                                         <svg preserveAspectRatio="xMidYMid meet" data-bbox="7 10 186 179.998" viewBox="7 10 186 179.998" height="170" width="170" xmlns="http://www.w3.org/2000/svg" data-type="color" role="img">
@@ -244,8 +252,8 @@ class Home extends React.Component{
                                 <h5>GALERIA DA GUILDA</h5>
                             </div>
                         </div>
-                        <div class="row align-items-center height-50">
-                            <div class="col-auto divImgSobre">
+                        <div className="row align-items-center height-50">
+                            <div className="col-auto divImgSobre">
                                 <a href="" rel="noopener noreferrer" target="_self">
                                     <div>
                                         <svg preserveAspectRatio="xMidYMid meet" data-bbox="24 30 152 140" viewBox="24 30 152 140" height="130px" width="130px" xmlns="http://www.w3.org/2000/svg" data-type="color" role="img">
@@ -269,6 +277,29 @@ class Home extends React.Component{
                                     </div>
                                 </a>
                                 <h5>Regras e <br/>Habilidades</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="divOficiais">
+                    <div className="containerQuemSomos container.col-md- width-100">
+                        <div className="row width-100 height-20">
+                            <div className="divTituloSobre col-auto">
+                                <h3>Fale com um de nossos oficiais:</h3>
+                            </div>
+                        </div>
+                        <div className="row justify-content-center width-100 height-80">
+                            <div className="col-xl-10 align-self-center">
+                                <div className="slider multiple-items">
+                                    <div className="imgOficiais" style={{backgroundImage:"url(" + process.env.PUBLIC_URL + "/images/oficiais/dedo.jpg)"}}></div>
+
+                                    <div className="multiple slide" style={{width: "187px"}}>2</div>   
+                                    <div className="multiple slide" style={{width: "187px"}}>2</div>   
+                                    <div className="multiple slide" style={{width: "187px"}}>3</div>   
+                                    <div className="multiple slide" style={{width: "187px"}}>3</div>   
+                                    <div className="multiple slide" style={{width: "187px"}}>3</div>   
+                                    <div className="multiple slide" style={{width: "187px"}}>3</div>   
+                                </div>
                             </div>
                         </div>
                     </div>

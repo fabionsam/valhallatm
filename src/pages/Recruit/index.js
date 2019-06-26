@@ -40,11 +40,6 @@ class Recruit extends React.Component {
     }
 
     componentDidMount(){
-        var script = document.createElement("script");
-        script.src = process.env.PUBLIC_URL + "/js/theme.js"; 
-        script.async = true;
-        document.body.appendChild(script);
-
         $('html,body').scrollTop(0);
     }
 
@@ -91,17 +86,17 @@ class Recruit extends React.Component {
     render(){
         return (
             <div id="Recruit">
-                <div class="modal fade" id="ExemploModalCentralizado" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                        <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="TituloModalCentralizado">Recrutamento</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                <div className="modal fade" id="ExemploModalCentralizado" tabIndex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+                    <div className="modal-dialog modal-dialog-centered" role="document">
+                        <div className="modal-content">
+                        <div className="modal-header">
+                            <h5 className="modal-title" id="TituloModalCentralizado">Recrutamento</h5>
+                            <button type="button" className="close" data-dismiss="modal" aria-label="Fechar">
                             <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
-                        <div class="modal-body" id="contactform">
-                            <h4 class="brand-heading" style={{color: "black"}}>{this.state.message}</h4>
+                        <div className="modal-body" id="contactform">
+                            <h4 className="brand-heading" style={{color: "black"}}>{this.state.message}</h4>
                             <form style={this.state.message === "Enviado com sucesso! Entraremos em contato." ? { display : "none"} : {}}>
                                 <input type="text" name="nome" placeholder="NOME DO PERSONAGEM" value={this.state.nome} onChange={this.handleChangeNome} required/>
                                 <input type="text" name="familia" placeholder="NOME DA FAMÍLIA" value={this.state.familia} onChange={this.handleChangeFamilia} required/>
@@ -120,9 +115,9 @@ class Recruit extends React.Component {
                                 <p/>
                             </form>
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                            <button type="button" class="btn btn-valhallaEnviar" onClick={this.handleSubmit} disabled={this.state.captcha === '' || this.state.classe === ''}>Enviar</button>
+                        <div className="modal-footer">
+                            <button type="button" className="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                            <button type="button" className="btn btn-valhallaEnviar" onClick={this.handleSubmit} disabled={this.state.captcha === '' || this.state.classe === ''}>Enviar</button>
                         </div>
                         </div>
                     </div>
