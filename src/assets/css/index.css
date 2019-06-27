@@ -205,6 +205,37 @@
 	opacity: 1 !important;
 	width: 130px !important;
 	height: 400px;
+	transition: .5s ease;
+}
+
+.divOficiaisFundo{
+	opacity: 1 !important;
+	width: 130px !important;
+	height: 400px;
+	background-color: white;
+}
+
+.imgOficiais:hover {
+	opacity: 0.3 !important;
+}
+
+.imgOficiais:hover + .text{
+	opacity: 1 !important;
+}
+
+.text {
+	background-color: transparent;
+	color: black;
+	font-size: 20px;
+	font-family: cinzel-bold;
+	padding: 16px 32px;
+	transition: .5s ease;
+	opacity: 0 !important;
+	top: 50%;
+	left: 50%;
+	transform: translate(-10%, -400%);
+	-ms-transform: translate(-10%, -400%);
+	text-align: center;
 }
 
 video{
@@ -281,4 +312,24 @@ h5{
 	font-family:cinzel-bold,serif;
 	letter-spacing:0.12em;
 	text-align: center;
+}
+
+a { color: inherit; } 
+
+a:link{
+	color: transparent;
+}
+
+/* mouse over */
+a:hover {
+    color: transparent;
+}
+
+/* link selecionado */
+a:active {
+    color: none;
+}
+
+a:visited {
+    color: transparent;
 }

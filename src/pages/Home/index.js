@@ -7,8 +7,9 @@ class Home extends React.Component{
     componentDidMount(){
         window.$('.multiple-items').slick({
             infinite: false,
-            slidesToShow: 3,
-            slidesToScroll: 3
+            slidesToShow: 9,
+            slidesToScroll: 4,
+            dots: true,
         });
     }
 
@@ -29,7 +30,7 @@ class Home extends React.Component{
                                 <button type="button" style={{marginTop: "15px"}} className="btn btn-valhalla" data-toggle="modal" data-target="#ExemploModalCentralizado">
                                     Recrutamento
                                 </button><br/><br/>
-                                <a href="https://www.twitch.tv/meridah_" rel="noopener noreferrer" target="_blank"><img alt="" src={process.env.PUBLIC_URL+"/images/discord.png"}></img></a>
+                                <a href="https://discord.gg/YYfzRtG" rel="noopener noreferrer" target="_blank"><img alt="" src={process.env.PUBLIC_URL+"/images/discord.png"}></img></a>
                                 
                             </div>
                         </div>
@@ -291,14 +292,48 @@ class Home extends React.Component{
                         <div className="row justify-content-center width-100 height-80">
                             <div className="col-xl-10 align-self-center">
                                 <div className="slider multiple-items">
-                                    <div className="imgOficiais" style={{backgroundImage:"url(" + process.env.PUBLIC_URL + "/images/oficiais/dedo.jpg)"}}></div>
-
-                                    <div className="multiple slide" style={{width: "187px"}}>2</div>   
-                                    <div className="multiple slide" style={{width: "187px"}}>2</div>   
-                                    <div className="multiple slide" style={{width: "187px"}}>3</div>   
-                                    <div className="multiple slide" style={{width: "187px"}}>3</div>   
-                                    <div className="multiple slide" style={{width: "187px"}}>3</div>   
-                                    <div className="multiple slide" style={{width: "187px"}}>3</div>   
+                                <a className="linkOficiais" href={process.env.PUBLIC_URL + "/images/oficiais/full/meridah.jpg"} data-lightbox="MeridaH">
+                                        <div className="divOficiaisFundo">
+                                            <div className="imgOficiais" style={{zIndex: 1, backgroundImage:"url(" + process.env.PUBLIC_URL + "/images/oficiais/portrait/meridah.jpg)"}}></div>
+                                            <div className="text" style={{zIndex: 10}}>MeridaH</div>
+                                        </div>
+                                    </a>
+                                    <a className="linkOficiais" href={process.env.PUBLIC_URL + "/images/oficiais/full/dedo.jpg"} data-lightbox="BichoGrilo">
+                                        <div className="divOficiaisFundo">
+                                            <div className="imgOficiais" style={{zIndex: 1, backgroundImage:"url(" + process.env.PUBLIC_URL + "/images/oficiais/portrait/dedo.jpg)"}}></div>
+                                            <div className="text" style={{zIndex: 10}}>BichoGrilo</div>
+                                        </div>
+                                    </a>
+                                    <a className="linkOficiais" href={process.env.PUBLIC_URL + "/images/oficiais/full/sevilha.jpg"} data-lightbox="Sevilhx">
+                                        <div className="divOficiaisFundo">
+                                            <div className="imgOficiais" style={{zIndex: 1, backgroundImage:"url(" + process.env.PUBLIC_URL + "/images/oficiais/portrait/sevilha.jpg)"}}></div>
+                                            <div className="text" style={{zIndex: 10}}>Sevilhx</div>
+                                        </div>
+                                    </a>
+                                    <a className="linkOficiais" href={process.env.PUBLIC_URL + "/images/oficiais/full/fabionsam.jpg"} data-lightbox="Delphi">
+                                        <div className="divOficiaisFundo">
+                                            <div className="imgOficiais" style={{zIndex: 1, backgroundImage:"url(" + process.env.PUBLIC_URL + "/images/oficiais/portrait/fabionsam.jpg)"}}></div>
+                                            <div className="text" style={{zIndex: 10}}>Delphi</div>
+                                        </div>
+                                    </a>
+                                    <a className="linkOficiais" href={process.env.PUBLIC_URL + "/images/oficiais/full/Djali.jpg"} data-lightbox="Djali">
+                                        <div className="divOficiaisFundo">
+                                            <div className="imgOficiais" style={{zIndex: 1, backgroundImage:"url(" + process.env.PUBLIC_URL + "/images/oficiais/portrait/Djali.jpg)"}}></div>
+                                            <div className="text" style={{zIndex: 10}}>Djali</div>
+                                        </div>
+                                    </a>
+                                    <a className="linkOficiais" href={process.env.PUBLIC_URL + "/images/oficiais/full/syruni.jpg"} data-lightbox="YojimboHyun">
+                                        <div className="divOficiaisFundo">
+                                            <div className="imgOficiais" style={{zIndex: 1, backgroundImage:"url(" + process.env.PUBLIC_URL + "/images/oficiais/portrait/syruni.jpg)"}}></div>
+                                            <div className="text" style={{zIndex: 10}}>YojimboHyun</div>
+                                        </div>
+                                    </a>
+                                    <a className="linkOficiais" href={process.env.PUBLIC_URL + "/images/oficiais/full/metal.jpg"} data-lightbox="IMetal">
+                                        <div className="divOficiaisFundo">
+                                            <div className="imgOficiais" style={{zIndex: 1, backgroundImage:"url(" + process.env.PUBLIC_URL + "/images/oficiais/portrait/metal.jpg)"}}></div>
+                                            <div className="text" style={{zIndex: 10}}>IMetal</div>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>
