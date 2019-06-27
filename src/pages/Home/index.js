@@ -7,7 +7,7 @@ class Home extends React.Component{
     componentDidMount(){
         window.$('.multiple-items').slick({
             infinite: false,
-            slidesToShow: 9,
+            slidesToShow: 7,
             slidesToScroll: 4,
             dots: true,
         });
@@ -24,8 +24,7 @@ class Home extends React.Component{
                             <div className="col">
                                 <h1>VALHALLA_TM</h1>
                                 <h3>Junte-se a nós</h3>
-                                <h4>Node war e sea hunt</h4>
-                                <h4>Sem restrição de GS</h4>
+                                <h4>Node war, Siege <br/>e sea hunt</h4>
                                 
                                 <button type="button" style={{marginTop: "15px"}} className="btn btn-valhalla" data-toggle="modal" data-target="#ExemploModalCentralizado">
                                     Recrutamento
@@ -36,7 +35,7 @@ class Home extends React.Component{
                         </div>
                     </div>
                 </div>
-                <div id="divSobre" style={{backgroundImage: "url("+process.env.PUBLIC_URL+"/images/papel.jpg)"}}>
+                <div id="divSobre" style={{backgroundImage: "url("+process.env.PUBLIC_URL+"/images/papel.jpg)", backgroundPosition: "center" }}>
                     <div className="containerQuemSomos container.col-md- width-85">
                         <div className="row">
                             <div className="divTituloSobre col-auto">
@@ -295,43 +294,43 @@ class Home extends React.Component{
                                 <a className="linkOficiais" href={process.env.PUBLIC_URL + "/images/oficiais/full/meridah.jpg"} data-lightbox="MeridaH">
                                         <div className="divOficiaisFundo">
                                             <div className="imgOficiais" style={{zIndex: 1, backgroundImage:"url(" + process.env.PUBLIC_URL + "/images/oficiais/portrait/meridah.jpg)"}}></div>
-                                            <div className="text" style={{zIndex: 10}}>MeridaH</div>
+                                            <div className="text" style={{transform: 'translate(-10%, -400%)', fontSize: "12px"}}>MeridaH</div>
                                         </div>
                                     </a>
                                     <a className="linkOficiais" href={process.env.PUBLIC_URL + "/images/oficiais/full/dedo.jpg"} data-lightbox="BichoGrilo">
                                         <div className="divOficiaisFundo">
                                             <div className="imgOficiais" style={{zIndex: 1, backgroundImage:"url(" + process.env.PUBLIC_URL + "/images/oficiais/portrait/dedo.jpg)"}}></div>
-                                            <div className="text" style={{zIndex: 10}}>BichoGrilo</div>
+                                            <div className="text" style={{transform: 'translate(-22.5%, -400%)', fontSize: "20px"}}>BichoGrilo</div>
                                         </div>
                                     </a>
                                     <a className="linkOficiais" href={process.env.PUBLIC_URL + "/images/oficiais/full/sevilha.jpg"} data-lightbox="Sevilhx">
                                         <div className="divOficiaisFundo">
                                             <div className="imgOficiais" style={{zIndex: 1, backgroundImage:"url(" + process.env.PUBLIC_URL + "/images/oficiais/portrait/sevilha.jpg)"}}></div>
-                                            <div className="text" style={{zIndex: 10}}>Sevilhx</div>
+                                            <div className="text" style={{transform: 'translate(-10%, -400%)'}}>Sevilhx</div>
                                         </div>
                                     </a>
                                     <a className="linkOficiais" href={process.env.PUBLIC_URL + "/images/oficiais/full/fabionsam.jpg"} data-lightbox="Delphi">
                                         <div className="divOficiaisFundo">
                                             <div className="imgOficiais" style={{zIndex: 1, backgroundImage:"url(" + process.env.PUBLIC_URL + "/images/oficiais/portrait/fabionsam.jpg)"}}></div>
-                                            <div className="text" style={{zIndex: 10}}>Delphi</div>
+                                            <div className="text" style={{transform: 'translate(-10%, -400%)'}}>Delphi</div>
                                         </div>
                                     </a>
                                     <a className="linkOficiais" href={process.env.PUBLIC_URL + "/images/oficiais/full/Djali.jpg"} data-lightbox="Djali">
                                         <div className="divOficiaisFundo">
                                             <div className="imgOficiais" style={{zIndex: 1, backgroundImage:"url(" + process.env.PUBLIC_URL + "/images/oficiais/portrait/Djali.jpg)"}}></div>
-                                            <div className="text" style={{zIndex: 10}}>Djali</div>
+                                            <div className="text" style={{transform: 'translate(-10%, -400%)'}}>Djali</div>
                                         </div>
                                     </a>
                                     <a className="linkOficiais" href={process.env.PUBLIC_URL + "/images/oficiais/full/syruni.jpg"} data-lightbox="YojimboHyun">
                                         <div className="divOficiaisFundo">
                                             <div className="imgOficiais" style={{zIndex: 1, backgroundImage:"url(" + process.env.PUBLIC_URL + "/images/oficiais/portrait/syruni.jpg)"}}></div>
-                                            <div className="text" style={{zIndex: 10}}>YojimboHyun</div>
+                                            <div className="text" style={{transform: 'translate(-10%, -400%)'}}>YojimboHyun</div>
                                         </div>
                                     </a>
                                     <a className="linkOficiais" href={process.env.PUBLIC_URL + "/images/oficiais/full/metal.jpg"} data-lightbox="IMetal">
                                         <div className="divOficiaisFundo">
                                             <div className="imgOficiais" style={{zIndex: 1, backgroundImage:"url(" + process.env.PUBLIC_URL + "/images/oficiais/portrait/metal.jpg)"}}></div>
-                                            <div className="text" style={{zIndex: 10}}>IMetal</div>
+                                            <div className="text" style={{transform: 'translate(-10%, -400%)'}}>IMetal</div>
                                         </div>
                                     </a>
                                 </div>
