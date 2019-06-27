@@ -100,7 +100,7 @@ class Home extends React.Component{
                                                 <br/>
                                                 <p className="tituloQuemSomos">Diversa</p>
                                                 <p className="textoQuemSomos">
-                                                    Não aceitamos qualquer tipo de discriminação.<br/>
+                                                    Não aceitamos qualquer tipo de discriminação.
                                                     Respeita as minas e as monas!
                                                 </p>
                                             </div>

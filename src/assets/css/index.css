@@ -182,7 +182,8 @@
 	margin-top: 3%;
 	font-family:barlow,serif;
 	font-size: 16px;
-	align: justify;
+	text-align: justify;
+ 	text-justify: inter-character;
 }
 
 .divTextoQuemSomos{
