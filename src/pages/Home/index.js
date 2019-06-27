@@ -11,7 +11,6 @@ class Home extends React.Component{
             slidesToShow: 7,
             slidesToScroll: 4,
             touchMove: true,
-            responsive: null,
             dots: false,
             responsive: [
                 {
@@ -325,72 +324,72 @@ class Home extends React.Component{
                             <div className="col-xl-10 align-self-center">
                                 <div className="slider multiple-items">
                                     <div className="divOficiaisFundo">
-                                        <a href={process.env.PUBLIC_URL + "/images/oficiais/full/meridah.jpg"} style={{width: "auto !important"}} data-title="MeridaH" data-lightbox="MeridaH">
-                                            <img className="imgOficiais" src={process.env.PUBLIC_URL + "/images/oficiais/portrait/meridah.jpg"}></img>
+                                        <a href={process.env.PUBLIC_URL + "/images/oficiais/full/meridah.jpg"} style={{width: "auto !important"}} data-title="MeridaH" data-lightbox="1">
+                                            <img className="imgOficiais" alt="" src={process.env.PUBLIC_URL + "/images/oficiais/portrait/meridah.jpg"}></img>
                                             <div className="overlay">
                                                 <div className="text">MeridaH</div>
                                             </div>
                                         </a>
                                     </div>
                                     <div className="divOficiaisFundo">
-                                        <a href={process.env.PUBLIC_URL + "/images/oficiais/full/dedo.jpg"} style={{width: "auto !important"}} data-title="BichoGrilo" data-lightbox="BichoGrilo">
-                                            <img className="imgOficiais" src={process.env.PUBLIC_URL + "/images/oficiais/portrait/dedo.jpg"}></img>
+                                        <a href={process.env.PUBLIC_URL + "/images/oficiais/full/dedo.jpg"} style={{width: "auto !important"}} data-title="BichoGrilo" data-lightbox="2">
+                                            <img className="imgOficiais" alt="" src={process.env.PUBLIC_URL + "/images/oficiais/portrait/dedo.jpg"}></img>
                                             <div className="overlay">
                                                 <div className="text">BichoGrilo</div>
                                             </div>
                                         </a>
                                     </div>
                                     <div className="divOficiaisFundo">
-                                        <a href={process.env.PUBLIC_URL + "/images/oficiais/full/sevilha.jpg"} style={{width: "auto !important"}} data-title="Sevilhx" data-lightbox="Sevilhx">
-                                            <img className="imgOficiais" src={process.env.PUBLIC_URL + "/images/oficiais/portrait/sevilha.jpg"}></img>
+                                        <a href={process.env.PUBLIC_URL + "/images/oficiais/full/sevilha.jpg"} style={{width: "auto !important"}} data-title="Sevilhx" data-lightbox="3">
+                                            <img className="imgOficiais" alt="" src={process.env.PUBLIC_URL + "/images/oficiais/portrait/sevilha.jpg"}></img>
                                             <div className="overlay">
                                                 <div className="text">Sevilhx</div>
                                             </div>
                                         </a>
                                     </div>
                                     <div className="divOficiaisFundo">
-                                        <a href={process.env.PUBLIC_URL + "/images/oficiais/full/fabionsam.jpg"} style={{width: "auto !important"}} data-title="Delphi" data-lightbox="Delphi">
-                                            <img className="imgOficiais" src={process.env.PUBLIC_URL + "/images/oficiais/portrait/fabionsam.jpg"}></img>
+                                        <a href={process.env.PUBLIC_URL + "/images/oficiais/full/fabionsam.jpg"} style={{width: "auto !important"}} data-title="Delphi" data-lightbox="4">
+                                            <img className="imgOficiais" alt="" src={process.env.PUBLIC_URL + "/images/oficiais/portrait/fabionsam.jpg"}></img>
                                             <div className="overlay">
                                                 <div className="text">Delphi</div>
                                             </div>
                                         </a>
                                     </div>
                                     <div className="divOficiaisFundo">
-                                        <a href={process.env.PUBLIC_URL + "/images/oficiais/full/Djali.jpg"} style={{width: "auto !important"}} data-title="Djali" data-lightbox="Djali">
-                                            <img className="imgOficiais" src={process.env.PUBLIC_URL + "/images/oficiais/portrait/Djali.jpg"}></img>
+                                        <a href={process.env.PUBLIC_URL + "/images/oficiais/full/Djali.jpg"} style={{width: "auto !important"}} data-title="Djali" data-lightbox="5">
+                                            <img className="imgOficiais" alt="" src={process.env.PUBLIC_URL + "/images/oficiais/portrait/Djali.jpg"}></img>
                                             <div className="overlay">
                                                 <div className="text">Djali</div>
                                             </div>
                                         </a>
                                     </div>
                                     <div className="divOficiaisFundo">
-                                        <a href={process.env.PUBLIC_URL + "/images/oficiais/full/syruni.png"} style={{width: "auto !important"}} data-title="YojimboHyun" data-lightbox="YojimboHyun">
-                                            <img className="imgOficiais" src={process.env.PUBLIC_URL + "/images/oficiais/portrait/syruni.jpg"}></img>
+                                        <a href={process.env.PUBLIC_URL + "/images/oficiais/full/syruni.png"} style={{width: "auto !important"}} data-title="YojimboHyun" data-lightbox="6">
+                                            <img className="imgOficiais" alt="" src={process.env.PUBLIC_URL + "/images/oficiais/portrait/syruni.jpg"}></img>
                                             <div className="overlay">
                                                 <div className="text">YojimboHyun</div>
                                             </div>
                                         </a>
                                     </div>
                                     <div className="divOficiaisFundo">
-                                        <a href={process.env.PUBLIC_URL + "/images/oficiais/full/metal.jpg"} style={{width: "auto !important"}} data-title="IMetal" data-lightbox="IMetal">
-                                            <img className="imgOficiais" src={process.env.PUBLIC_URL + "/images/oficiais/portrait/metal.jpg"}></img>
+                                        <a href={process.env.PUBLIC_URL + "/images/oficiais/full/metal.png"} style={{width: "auto !important"}} data-title="IMetal" data-lightbox="7">
+                                            <img className="imgOficiais" alt="" src={process.env.PUBLIC_URL + "/images/oficiais/portrait/metal.jpg"}></img>
                                             <div className="overlay">
                                                 <div className="text">IMetal</div>
                                             </div>
                                         </a>
                                     </div>
                                     <div className="divOficiaisFundo">
-                                        <a href={process.env.PUBLIC_URL + "/images/oficiais/full/gillroy.png"} style={{width: "auto !important"}} data-title="Gillroy" data-lightbox="Gillroy">
-                                            <img className="imgOficiais" src={process.env.PUBLIC_URL + "/images/oficiais/portrait/gillroy.jpg"}></img>
+                                        <a href={process.env.PUBLIC_URL + "/images/oficiais/full/gillroy.png"} style={{width: "auto !important"}} data-title="Gillroy" data-lightbox="8">
+                                            <img className="imgOficiais" alt="" src={process.env.PUBLIC_URL + "/images/oficiais/portrait/gillroy.jpg"}></img>
                                             <div className="overlay">
                                                 <div className="text">Gillroy</div>
                                             </div>
                                         </a>
                                     </div>
                                     <div className="divOficiaisFundo">
-                                        <a href={process.env.PUBLIC_URL + "/images/oficiais/full/ajax.jpg"} style={{width: "auto !important"}} data-title="Frenetic" data-lightbox="Frenetic">
-                                            <img className="imgOficiais" src={process.env.PUBLIC_URL + "/images/oficiais/portrait/ajax.jpg"}></img>
+                                        <a href={process.env.PUBLIC_URL + "/images/oficiais/full/ajax.jpg"} style={{width: "auto !important"}} data-title="Frenetic" data-lightbox="9">
+                                            <img className="imgOficiais" alt="" src={process.env.PUBLIC_URL + "/images/oficiais/portrait/ajax.jpg"}></img>
                                             <div className="overlay">
                                                 <div className="text">Frenetic</div>
                                             </div>
