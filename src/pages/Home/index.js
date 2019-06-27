@@ -6,10 +6,43 @@ import Recruit from '../Recruit/index.js';
 class Home extends React.Component{
     componentDidMount(){
         window.$('.multiple-items').slick({
-            infinite: false,
+            arrows: true,
+            infinite: true,
             slidesToShow: 7,
             slidesToScroll: 4,
-            dots: true,
+            touchMove: true,
+            responsive: null,
+            dots: false,
+            responsive: [
+                {
+                    breakpoint: 1280,
+                    settings: {
+                      slidesToShow: 5,
+                      slidesToScroll: 2,
+                    }
+                },
+                {
+                  breakpoint: 1024,
+                  settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 2,
+                  }
+                },
+                {
+                  breakpoint: 768,
+                  settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1
+                  }
+                },
+                {
+                  breakpoint: 320,
+                  settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                  }
+                }
+            ]
         });
     }
 
@@ -291,48 +324,78 @@ class Home extends React.Component{
                         <div className="row justify-content-center width-100 height-80">
                             <div className="col-xl-10 align-self-center">
                                 <div className="slider multiple-items">
-                                <a className="linkOficiais" href={process.env.PUBLIC_URL + "/images/oficiais/full/meridah.jpg"} data-lightbox="MeridaH">
-                                        <div className="divOficiaisFundo">
-                                            <div className="imgOficiais" style={{zIndex: 1, backgroundImage:"url(" + process.env.PUBLIC_URL + "/images/oficiais/portrait/meridah.jpg)"}}></div>
-                                            <div className="text" style={{transform: 'translate(-10%, -400%)', fontSize: "12px"}}>MeridaH</div>
-                                        </div>
-                                    </a>
-                                    <a className="linkOficiais" href={process.env.PUBLIC_URL + "/images/oficiais/full/dedo.jpg"} data-lightbox="BichoGrilo">
-                                        <div className="divOficiaisFundo">
-                                            <div className="imgOficiais" style={{zIndex: 1, backgroundImage:"url(" + process.env.PUBLIC_URL + "/images/oficiais/portrait/dedo.jpg)"}}></div>
-                                            <div className="text" style={{transform: 'translate(-22.5%, -400%)', fontSize: "20px"}}>BichoGrilo</div>
-                                        </div>
-                                    </a>
-                                    <a className="linkOficiais" href={process.env.PUBLIC_URL + "/images/oficiais/full/sevilha.jpg"} data-lightbox="Sevilhx">
-                                        <div className="divOficiaisFundo">
-                                            <div className="imgOficiais" style={{zIndex: 1, backgroundImage:"url(" + process.env.PUBLIC_URL + "/images/oficiais/portrait/sevilha.jpg)"}}></div>
-                                            <div className="text" style={{transform: 'translate(-10%, -400%)'}}>Sevilhx</div>
-                                        </div>
-                                    </a>
-                                    <a className="linkOficiais" href={process.env.PUBLIC_URL + "/images/oficiais/full/fabionsam.jpg"} data-lightbox="Delphi">
-                                        <div className="divOficiaisFundo">
-                                            <div className="imgOficiais" style={{zIndex: 1, backgroundImage:"url(" + process.env.PUBLIC_URL + "/images/oficiais/portrait/fabionsam.jpg)"}}></div>
-                                            <div className="text" style={{transform: 'translate(-10%, -400%)'}}>Delphi</div>
-                                        </div>
-                                    </a>
-                                    <a className="linkOficiais" href={process.env.PUBLIC_URL + "/images/oficiais/full/Djali.jpg"} data-lightbox="Djali">
-                                        <div className="divOficiaisFundo">
-                                            <div className="imgOficiais" style={{zIndex: 1, backgroundImage:"url(" + process.env.PUBLIC_URL + "/images/oficiais/portrait/Djali.jpg)"}}></div>
-                                            <div className="text" style={{transform: 'translate(-10%, -400%)'}}>Djali</div>
-                                        </div>
-                                    </a>
-                                    <a className="linkOficiais" href={process.env.PUBLIC_URL + "/images/oficiais/full/syruni.jpg"} data-lightbox="YojimboHyun">
-                                        <div className="divOficiaisFundo">
-                                            <div className="imgOficiais" style={{zIndex: 1, backgroundImage:"url(" + process.env.PUBLIC_URL + "/images/oficiais/portrait/syruni.jpg)"}}></div>
-                                            <div className="text" style={{transform: 'translate(-10%, -400%)'}}>YojimboHyun</div>
-                                        </div>
-                                    </a>
-                                    <a className="linkOficiais" href={process.env.PUBLIC_URL + "/images/oficiais/full/metal.jpg"} data-lightbox="IMetal">
-                                        <div className="divOficiaisFundo">
-                                            <div className="imgOficiais" style={{zIndex: 1, backgroundImage:"url(" + process.env.PUBLIC_URL + "/images/oficiais/portrait/metal.jpg)"}}></div>
-                                            <div className="text" style={{transform: 'translate(-10%, -400%)'}}>IMetal</div>
-                                        </div>
-                                    </a>
+                                    <div className="divOficiaisFundo">
+                                        <a href={process.env.PUBLIC_URL + "/images/oficiais/full/meridah.jpg"} style={{width: "auto !important"}} data-title="MeridaH" data-lightbox="MeridaH">
+                                            <img className="imgOficiais" src={process.env.PUBLIC_URL + "/images/oficiais/portrait/meridah.jpg"}></img>
+                                            <div className="overlay">
+                                                <div className="text">MeridaH</div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div className="divOficiaisFundo">
+                                        <a href={process.env.PUBLIC_URL + "/images/oficiais/full/dedo.jpg"} style={{width: "auto !important"}} data-title="BichoGrilo" data-lightbox="BichoGrilo">
+                                            <img className="imgOficiais" src={process.env.PUBLIC_URL + "/images/oficiais/portrait/dedo.jpg"}></img>
+                                            <div className="overlay">
+                                                <div className="text">BichoGrilo</div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div className="divOficiaisFundo">
+                                        <a href={process.env.PUBLIC_URL + "/images/oficiais/full/sevilha.jpg"} style={{width: "auto !important"}} data-title="Sevilhx" data-lightbox="Sevilhx">
+                                            <img className="imgOficiais" src={process.env.PUBLIC_URL + "/images/oficiais/portrait/sevilha.jpg"}></img>
+                                            <div className="overlay">
+                                                <div className="text">Sevilhx</div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div className="divOficiaisFundo">
+                                        <a href={process.env.PUBLIC_URL + "/images/oficiais/full/fabionsam.jpg"} style={{width: "auto !important"}} data-title="Delphi" data-lightbox="Delphi">
+                                            <img className="imgOficiais" src={process.env.PUBLIC_URL + "/images/oficiais/portrait/fabionsam.jpg"}></img>
+                                            <div className="overlay">
+                                                <div className="text">Delphi</div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div className="divOficiaisFundo">
+                                        <a href={process.env.PUBLIC_URL + "/images/oficiais/full/Djali.jpg"} style={{width: "auto !important"}} data-title="Djali" data-lightbox="Djali">
+                                            <img className="imgOficiais" src={process.env.PUBLIC_URL + "/images/oficiais/portrait/Djali.jpg"}></img>
+                                            <div className="overlay">
+                                                <div className="text">Djali</div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div className="divOficiaisFundo">
+                                        <a href={process.env.PUBLIC_URL + "/images/oficiais/full/syruni.png"} style={{width: "auto !important"}} data-title="YojimboHyun" data-lightbox="YojimboHyun">
+                                            <img className="imgOficiais" src={process.env.PUBLIC_URL + "/images/oficiais/portrait/syruni.jpg"}></img>
+                                            <div className="overlay">
+                                                <div className="text">YojimboHyun</div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div className="divOficiaisFundo">
+                                        <a href={process.env.PUBLIC_URL + "/images/oficiais/full/metal.jpg"} style={{width: "auto !important"}} data-title="IMetal" data-lightbox="IMetal">
+                                            <img className="imgOficiais" src={process.env.PUBLIC_URL + "/images/oficiais/portrait/metal.jpg"}></img>
+                                            <div className="overlay">
+                                                <div className="text">IMetal</div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div className="divOficiaisFundo">
+                                        <a href={process.env.PUBLIC_URL + "/images/oficiais/full/gillroy.png"} style={{width: "auto !important"}} data-title="Gillroy" data-lightbox="Gillroy">
+                                            <img className="imgOficiais" src={process.env.PUBLIC_URL + "/images/oficiais/portrait/gillroy.jpg"}></img>
+                                            <div className="overlay">
+                                                <div className="text">Gillroy</div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div className="divOficiaisFundo">
+                                        <a href={process.env.PUBLIC_URL + "/images/oficiais/full/ajax.jpg"} style={{width: "auto !important"}} data-title="Frenetic" data-lightbox="Frenetic">
+                                            <img className="imgOficiais" src={process.env.PUBLIC_URL + "/images/oficiais/portrait/ajax.jpg"}></img>
+                                            <div className="overlay">
+                                                <div className="text">Frenetic</div>
+                                            </div>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
