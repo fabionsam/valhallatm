@@ -321,11 +321,20 @@ h5{
 	text-align: center;
 }
 
+.btn:focus {
+	outline: none;
+}
+
 a { color: inherit; } 
 
 a:link{
 	color: transparent;
 }
+
+a:focus{
+	outline: none;
+}
+
 
 /* mouse over */
 a:hover {
