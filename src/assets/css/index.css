@@ -332,6 +332,7 @@ h5{
 
 .btn:focus {
 	outline: none !important;
+	box-shadow: none !important;
 }
 
 a { color: inherit; } 
