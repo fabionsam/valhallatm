@@ -63,6 +63,15 @@
 	text-align: center;
 	position: relative;
 }
+#divRegras{  
+	width: 100%; 
+	height: 500px; 
+	margin-top:80px;
+	right:0;
+	bottom:0;
+	text-align: justify;
+	position: relative;
+}
 #contentCabecalho{
 	margin-top:250px;
 }
