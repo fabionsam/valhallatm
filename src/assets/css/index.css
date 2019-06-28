@@ -331,7 +331,7 @@ h5{
 }
 
 .btn:focus {
-	outline: none;
+	outline: none !important;
 }
 
 a { color: inherit; } 

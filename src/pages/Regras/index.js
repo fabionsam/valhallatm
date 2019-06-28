@@ -4,6 +4,10 @@ import Footer from '../Footer/index.js';
 import { Link } from 'react-router-dom';
 
 class Regras extends React.Component{
+    componentDidMount(){
+        window.$('html,body').scrollTop(0);
+    }
+
     render(){
         return(
             <div id="Regras">
