@@ -413,7 +413,7 @@ class Home extends React.Component{
                                         </a>
                                     </div>
                                     <div className="divOficiaisFundo">
-                                        <a href={process.env.PUBLIC_URL + "/images/oficiais/full/katarina.png"} style={{width: "auto !important"}} data-title="Sardotthien" data-lightbox="oficial">
+                                        <a href={process.env.PUBLIC_URL + "/images/oficiais/full/katarina.jpg"} style={{width: "auto !important"}} data-title="Sardotthien" data-lightbox="oficial">
                                             <img className="imgOficiais" alt="" src={process.env.PUBLIC_URL + "/images/oficiais/portrait/katarina.jpg"}></img>
                                             <div className="overlay">
                                                 <div className="text">Sardotthien</div>
