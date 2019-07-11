@@ -340,7 +340,7 @@ class Home extends React.Component{
                                             </div>
                                         </a>
                                     </div>
-                                    <div className="divOficiaisFundo">
+                                    {/* <div className="divOficiaisFundo">
                                         <a href={process.env.PUBLIC_URL + "/images/oficiais/full/sevilha.jpg"} style={{width: "auto !important"}} data-title="Sevilhx" data-lightbox="oficial">
                                             <img className="imgOficiais" alt="" src={process.env.PUBLIC_URL + "/images/oficiais/portrait/sevilha.jpg"}></img>
                                             <div className="overlay">
@@ -363,7 +363,7 @@ class Home extends React.Component{
                                                 <div className="text">Djali</div>
                                             </div>
                                         </a>
-                                    </div>
+                                    </div> */}
                                     <div className="divOficiaisFundo">
                                         <a href={process.env.PUBLIC_URL + "/images/oficiais/full/syruni.png"} style={{width: "auto !important"}} data-title="YojimboHyun" data-lightbox="oficial">
                                             <img className="imgOficiais" alt="" src={process.env.PUBLIC_URL + "/images/oficiais/portrait/syruni.jpg"}></img>
