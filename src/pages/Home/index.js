@@ -363,7 +363,7 @@ class Home extends React.Component{
                                                 <div className="text">Djali</div>
                                             </div>
                                         </a>
-                                    </div> */}
+                                    </div> 
                                     <div className="divOficiaisFundo">
                                         <a href={process.env.PUBLIC_URL + "/images/oficiais/full/syruni.png"} style={{width: "auto !important"}} data-title="YojimboHyun" data-lightbox="oficial">
                                             <img className="imgOficiais" alt="" src={process.env.PUBLIC_URL + "/images/oficiais/portrait/syruni.jpg"}></img>
@@ -379,7 +379,7 @@ class Home extends React.Component{
                                                 <div className="text">IMetal</div>
                                             </div>
                                         </a>
-                                    </div>
+                                    </div> */}
                                     <div className="divOficiaisFundo">
                                         <a href={process.env.PUBLIC_URL + "/images/oficiais/full/gillroy.png"} style={{width: "auto !important"}} data-title="Gillroy" data-lightbox="oficial">
                                             <img className="imgOficiais" alt="" src={process.env.PUBLIC_URL + "/images/oficiais/portrait/gillroy.jpg"}></img>
