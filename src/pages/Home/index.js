@@ -412,14 +412,14 @@ class Home extends React.Component{
                                             </div>
                                         </a>
                                     </div>
-                                    <div className="divOficiaisFundo">
+                                    {/* <div className="divOficiaisFundo">
                                         <a href={process.env.PUBLIC_URL + "/images/oficiais/full/katarina.jpg"} style={{width: "auto !important"}} data-title="Sardotthien" data-lightbox="oficial">
                                             <img className="imgOficiais" alt="" src={process.env.PUBLIC_URL + "/images/oficiais/portrait/katarina.jpg"}></img>
                                             <div className="overlay">
                                                 <div className="text">Sardotthien</div>
                                             </div>
                                         </a>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                         </div>
