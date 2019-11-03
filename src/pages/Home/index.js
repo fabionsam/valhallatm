@@ -198,7 +198,7 @@ class Home extends React.Component{
                                                 <br/>
                                                 <p className="tituloQuemSomos">Divertida</p>
                                                 <p className="textoQuemSomos">
-                                                    Nós passamos o tempo juntos. No nosso discord, na arena livre, fazendo quests e outras atividades.
+                                                    Nós passamos o tempo juntos no nosso discord, na arena livre, fazendo quests e outras atividades.
                                                 </p>
                                             </div>
                                         </div>
