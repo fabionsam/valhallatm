@@ -57,7 +57,7 @@ class Home extends React.Component{
                             <div className="col">
                                 <h1>VALHALLA_TM</h1>
                                 <h3>Junte-se a nós</h3>
-                                <h4>PVE e LifeSkill</h4>
+                                <h4>PVE e LifeSkill<br/>Conteúdo Marítimo</h4>
                                 
                                 <button type="button" style={{marginTop: "15px"}} className="btn btn-valhalla" data-toggle="modal" data-target="#ExemploModalCentralizado">
                                     Recrutamento
