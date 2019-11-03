@@ -57,7 +57,7 @@ class Home extends React.Component{
                             <div className="col">
                                 <h1>VALHALLA_TM</h1>
                                 <h3>Junte-se a nós</h3>
-                                <h4>Node war, Siege <br/>e sea hunt</h4>
+                                <h4>PVE e LifeSkill</h4>
                                 
                                 <button type="button" style={{marginTop: "15px"}} className="btn btn-valhalla" data-toggle="modal" data-target="#ExemploModalCentralizado">
                                     Recrutamento
@@ -164,9 +164,9 @@ class Home extends React.Component{
                                             <div className="divTextoQuemSomos col">
                                                 <br/>
                                                 <br/>
-                                                <p className="tituloQuemSomos">Atividades da Guilda</p>
+                                                <p className="tituloQuemSomos">Perfil de membro</p>
                                                 <p className="textoQuemSomos">
-                                                    Foco em Node War e Sea Hunt, com Eventos Únicos, PVP Massivo, PVE e Life Skill
+                                                    Players interessados no conteúdo PVE/marítimo/lifeskill
                                                 </p>
                                             </div>
                                         </div>
@@ -198,7 +198,7 @@ class Home extends React.Component{
                                                 <br/>
                                                 <p className="tituloQuemSomos">Divertida</p>
                                                 <p className="textoQuemSomos">
-                                                    Nós passamos o tempo juntos. No nosso discord, na arena livre, fazendo quests, GVG e uma infinidade de outras atividades.
+                                                    Nós passamos o tempo juntos. No nosso discord, na arena livre, fazendo quests e outras atividades.
                                                 </p>
                                             </div>
                                         </div>
@@ -340,7 +340,7 @@ class Home extends React.Component{
                                             </div>
                                         </a>
                                     </div>
-                                    <div className="divOficiaisFundo">
+                                    {/* <div className="divOficiaisFundo">
                                         <a href={process.env.PUBLIC_URL + "/images/oficiais/full/sevilha.jpg"} style={{width: "auto !important"}} data-title="Sevilhx" data-lightbox="oficial">
                                             <img className="imgOficiais" alt="" src={process.env.PUBLIC_URL + "/images/oficiais/portrait/sevilha.jpg"}></img>
                                             <div className="overlay">
@@ -387,7 +387,7 @@ class Home extends React.Component{
                                                 <div className="text">Gillroy</div>
                                             </div>
                                         </a>
-                                    </div>
+                                    </div> */}
                                     {/* <div className="divOficiaisFundo">
                                         <a href={process.env.PUBLIC_URL + "/images/oficiais/full/ajax.png"} style={{width: "auto !important"}} data-title="Frenetic" data-lightbox="oficial">
                                             <img className="imgOficiais" alt="" src={process.env.PUBLIC_URL + "/images/oficiais/portrait/ajax.jpg"}></img>
@@ -396,7 +396,7 @@ class Home extends React.Component{
                                             </div>
                                         </a>
                                     </div> */}
-                                    <div className="divOficiaisFundo">
+                                    {/* <div className="divOficiaisFundo">
                                         <a href={process.env.PUBLIC_URL + "/images/oficiais/full/shimada.jpg"} style={{width: "auto !important"}} data-title="Shiimada" data-lightbox="oficial">
                                             <img className="imgOficiais" alt="" src={process.env.PUBLIC_URL + "/images/oficiais/portrait/shimada.jpg"}></img>
                                             <div className="overlay">
@@ -419,7 +419,7 @@ class Home extends React.Component{
                                                 <div className="text">Sardotthien</div>
                                             </div>
                                         </a>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                         </div>
