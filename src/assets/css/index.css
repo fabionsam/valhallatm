@@ -341,6 +341,10 @@ a:link{
 	color: transparent;
 }
 
+#Admin a:link{
+	color: inherit;
+}
+
 a:focus{
 	outline: none;
 }

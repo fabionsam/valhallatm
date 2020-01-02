@@ -3,46 +3,105 @@ import Header from '../Header/index.js';
 import Footer from '../Footer/index.js';
 import Recruit from '../Recruit/index.js';
 import { Link } from 'react-router-dom';
+import api from '../../services/api.js';
 
 class Home extends React.Component{
+    constructor(props){
+        super(props);
+        this.state = { photos: [] };
+    }
+    
     componentDidMount(){
-        window.$('.multiple-items').slick({
-            arrows: true,
-            infinite: true,
-            slidesToShow: 7,
-            slidesToScroll: 4,
-            touchMove: true,
-            dots: false,
-            responsive: [
-                {
-                    breakpoint: 1280,
-                    settings: {
-                      slidesToShow: 5,
-                      slidesToScroll: 2,
+        api.get('/getPhoto',
+        {
+            auth : { username : "valhalla_tm" , password : "Tavares59@123456$"}
+        }).then(res => {
+            this.setState({ photos: res.data });
+        });
+
+        api.get('/getOficial',
+        {
+            auth : { username : "valhalla_tm" , password : "Tavares59@123456$"}
+        }).then(res => {
+            this.setState({ oficiais: res.data });
+        
+            this.state.oficiais.map((value, index) => {
+                var parentDiv = document.getElementById("oficiaisslider");
+                var newOficial = document.createElement("div");
+                newOficial.className = "divOficiaisFundo";
+
+                var newDivOverLay = document.createElement("div");
+                newDivOverLay.className = "overlay";
+
+                var newDivText = document.createElement("div");
+                newDivText.className = "text";
+                newDivText.innerText = value.oficial;
+                newDivOverLay.appendChild(newDivText);
+
+                var newImg = document.createElement("img");
+                newImg.className = "imgOficiais";
+                newImg.alt = "";
+                newImg.src = value.photo.indexOf("http") > -1 ? value.photo : `http://${value.photo}`;
+
+                var newA = document.createElement("a");
+                newA.href = value.photoG.indexOf("http") > -1 ? value.photoG : `http://${value.photoG}`;
+                newA.style = {width: "auto !important"};
+                newA.setAttribute("data-caption", value.oficial);
+                newA.setAttribute("data-fancybox", "oficial");
+                newA.appendChild(newImg);
+                newA.appendChild(newDivOverLay);
+
+                var newH6 = document.createElement("h6");
+                newH6.value = value.oficial;
+                
+                var newFigCaption = document.createElement("figcaption");
+                newFigCaption.appendChild(newH6);
+
+                var newFigure = document.createElement("figure");
+                newFigure.appendChild(newA);
+
+                newOficial.appendChild(newFigure);
+                parentDiv.insertBefore(newOficial, parentDiv.nextSibling);
+            });
+            
+            window.$('.multiple-items').slick({
+                arrows: true,
+                infinite: true,
+                slidesToShow: 7,
+                slidesToScroll: 4,
+                touchMove: true,
+                dots: false,
+                responsive: [
+                    {
+                        breakpoint: 1280,
+                        settings: {
+                            slidesToShow: 5,
+                            slidesToScroll: 2,
+                        }
+                    },
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                        slidesToShow: 4,
+                        slidesToScroll: 2,
+                        }
+                    },
+                    {
+                        breakpoint: 768,
+                        settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1
+                        }
+                    },
+                    {
+                        breakpoint: 320,
+                        settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                        }
                     }
-                },
-                {
-                  breakpoint: 1024,
-                  settings: {
-                    slidesToShow: 4,
-                    slidesToScroll: 2,
-                  }
-                },
-                {
-                  breakpoint: 768,
-                  settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 1
-                  }
-                },
-                {
-                  breakpoint: 320,
-                  settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1
-                  }
-                }
-            ]
+                ]
+            });
         });
     }
 
@@ -210,7 +269,7 @@ class Home extends React.Component{
                     <div className="containerQuemSomos container width-15">
                         <div className="row align-items-center height-50">
                             <div className="col-auto divImgSobre">
-                                <a href="" rel="noopener noreferrer" target="_self">
+                                <a href="" data-fancybox-trigger="gallery" href="javascript:;">
                                     <div>
                                         <svg preserveAspectRatio="xMidYMid meet" data-bbox="7 10 186 179.998" viewBox="7 10 186 179.998" height="170" width="170" xmlns="http://www.w3.org/2000/svg" data-type="color" role="img">
                                             <g>
@@ -283,6 +342,18 @@ class Home extends React.Component{
                                     </div>
                                 </a>
                                 <h5>GALERIA DA GUILDA</h5>
+                                {
+                                    this.state.photos.map((value, index) => {
+                                        return (
+                                            <figure hidden key={value.id}>
+                                                <a data-fancybox="gallery" data-caption={value.caption} href={value.photo}><img src={value.photo}/></a>
+                                                <figcaption>
+                                                    {value.caption}
+                                                </figcaption>
+                                            </figure>
+                                        )
+                                    })
+                                }
                             </div>
                         </div>
                         <div className="row align-items-center height-50">
@@ -323,103 +394,7 @@ class Home extends React.Component{
                         </div>
                         <div className="row justify-content-center width-100 height-80">
                             <div className="col-xl-10 align-self-center">
-                                <div className="slider multiple-items">
-                                    <div className="divOficiaisFundo">
-                                        <a href={process.env.PUBLIC_URL + "/images/oficiais/full/meridah.jpg"} style={{width: "auto !important"}} data-title="MeridaH" data-lightbox="oficial">
-                                            <img className="imgOficiais" alt="" src={process.env.PUBLIC_URL + "/images/oficiais/portrait/meridah.jpg"}></img>
-                                            <div className="overlay">
-                                                <div className="text">MeridaH</div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div className="divOficiaisFundo">
-                                        <a href={process.env.PUBLIC_URL + "/images/oficiais/full/dedo.jpg"} style={{width: "auto !important"}} data-title="BichoGrilo" data-lightbox="oficial">
-                                            <img className="imgOficiais" alt="" src={process.env.PUBLIC_URL + "/images/oficiais/portrait/dedo.jpg"}></img>
-                                            <div className="overlay">
-                                                <div className="text">BichoGrilo</div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    {/* <div className="divOficiaisFundo">
-                                        <a href={process.env.PUBLIC_URL + "/images/oficiais/full/sevilha.jpg"} style={{width: "auto !important"}} data-title="Sevilhx" data-lightbox="oficial">
-                                            <img className="imgOficiais" alt="" src={process.env.PUBLIC_URL + "/images/oficiais/portrait/sevilha.jpg"}></img>
-                                            <div className="overlay">
-                                                <div className="text">Sevilhx</div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div className="divOficiaisFundo">
-                                        <a href={process.env.PUBLIC_URL + "/images/oficiais/full/fabionsam.jpg"} style={{width: "auto !important"}} data-title="Delphi" data-lightbox="oficial">
-                                            <img className="imgOficiais" alt="" src={process.env.PUBLIC_URL + "/images/oficiais/portrait/fabionsam.jpg"}></img>
-                                            <div className="overlay">
-                                                <div className="text">Delphi</div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div className="divOficiaisFundo">
-                                        <a href={process.env.PUBLIC_URL + "/images/oficiais/full/Djali.jpg"} style={{width: "auto !important"}} data-title="Djali" data-lightbox="oficial">
-                                            <img className="imgOficiais" alt="" src={process.env.PUBLIC_URL + "/images/oficiais/portrait/Djali.jpg"}></img>
-                                            <div className="overlay">
-                                                <div className="text">Djali</div>
-                                            </div>
-                                        </a>
-                                    </div> 
-                                    <div className="divOficiaisFundo">
-                                        <a href={process.env.PUBLIC_URL + "/images/oficiais/full/syruni.png"} style={{width: "auto !important"}} data-title="YojimboHyun" data-lightbox="oficial">
-                                            <img className="imgOficiais" alt="" src={process.env.PUBLIC_URL + "/images/oficiais/portrait/syruni.jpg"}></img>
-                                            <div className="overlay">
-                                                <div className="text">YojimboHyun</div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div className="divOficiaisFundo">
-                                        <a href={process.env.PUBLIC_URL + "/images/oficiais/full/metal.png"} style={{width: "auto !important"}} data-title="IMetal" data-lightbox="oficial">
-                                            <img className="imgOficiais" alt="" src={process.env.PUBLIC_URL + "/images/oficiais/portrait/metal.jpg"}></img>
-                                            <div className="overlay">
-                                                <div className="text">IMetal</div>
-                                            </div>
-                                        </a>
-                                    </div> 
-                                    <div className="divOficiaisFundo">
-                                        <a href={process.env.PUBLIC_URL + "/images/oficiais/full/gillroy.png"} style={{width: "auto !important"}} data-title="Gillroy" data-lightbox="oficial">
-                                            <img className="imgOficiais" alt="" src={process.env.PUBLIC_URL + "/images/oficiais/portrait/gillroy.jpg"}></img>
-                                            <div className="overlay">
-                                                <div className="text">Gillroy</div>
-                                            </div>
-                                        </a>
-                                    </div> 
-                                    <div className="divOficiaisFundo">
-                                        <a href={process.env.PUBLIC_URL + "/images/oficiais/full/ajax.png"} style={{width: "auto !important"}} data-title="Frenetic" data-lightbox="oficial">
-                                            <img className="imgOficiais" alt="" src={process.env.PUBLIC_URL + "/images/oficiais/portrait/ajax.jpg"}></img>
-                                            <div className="overlay">
-                                                <div className="text">Frenetic</div>
-                                            </div>
-                                        </a>
-                                    </div> 
-                                    <div className="divOficiaisFundo">
-                                        <a href={process.env.PUBLIC_URL + "/images/oficiais/full/shimada.jpg"} style={{width: "auto !important"}} data-title="Shiimada" data-lightbox="oficial">
-                                            <img className="imgOficiais" alt="" src={process.env.PUBLIC_URL + "/images/oficiais/portrait/shimada.jpg"}></img>
-                                            <div className="overlay">
-                                                <div className="text">Shiimada</div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div className="divOficiaisFundo">
-                                        <a href={process.env.PUBLIC_URL + "/images/oficiais/full/miuki.png"} style={{width: "auto !important"}} data-title="ZaoldyecKI" data-lightbox="oficial">
-                                            <img className="imgOficiais" alt="" src={process.env.PUBLIC_URL + "/images/oficiais/portrait/miuki.jpg"}></img>
-                                            <div className="overlay">
-                                                <div className="text">ZaoldyecKI</div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    {/* <div className="divOficiaisFundo">
-                                        <a href={process.env.PUBLIC_URL + "/images/oficiais/full/katarina.jpg"} style={{width: "auto !important"}} data-title="Sardotthien" data-lightbox="oficial">
-                                            <img className="imgOficiais" alt="" src={process.env.PUBLIC_URL + "/images/oficiais/portrait/katarina.jpg"}></img>
-                                            <div className="overlay">
-                                                <div className="text">Sardotthien</div>
-                                            </div>
-                                        </a>
-                                    </div> */}
+                                <div id="oficiaisslider" className="slider multiple-items">
                                 </div>
                             </div>
                         </div>
