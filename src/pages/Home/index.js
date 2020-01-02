@@ -166,7 +166,7 @@ class Home extends React.Component{
                                                 <br/>
                                                 <p className="tituloQuemSomos">Perfil</p>
                                                 <p className="textoQuemSomos">
-                                                    Players interessados no conteúdo PVE / marítimo / lifeskill. Sem exigência de GS!
+                                                    Players interessados no conteúdo PVE / CONTEÚDO MARÍTIMO / LIFESKILL. Sem exigência de GS!
                                                 </p>
                                             </div>
                                         </div>
