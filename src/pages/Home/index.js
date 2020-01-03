@@ -121,7 +121,7 @@ class Home extends React.Component{
                                 <button type="button" style={{marginTop: "15px"}} className="btn btn-valhalla" data-toggle="modal" data-target="#ExemploModalCentralizado">
                                     Recrutamento
                                 </button><br/><br/>
-                                <a href="https://discord.gg/YYfzRtG" rel="noopener noreferrer" target="_blank"><img alt="" src={process.env.PUBLIC_URL+"/images/discord.png"}></img></a>
+                                <a href="https://discord.gg/NBk4r5t" rel="noopener noreferrer" target="_blank"><img alt="" src={process.env.PUBLIC_URL+"/images/discord.png"}></img></a>
                                 
                             </div>
                         </div>
