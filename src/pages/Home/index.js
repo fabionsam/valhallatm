@@ -212,7 +212,7 @@ class Home extends React.Component{
                                     <div className="container">
                                         <div className="row">
                                             <div className="divTextoQuemSomos col" style={{textAlign: "center"}}>
-                                                <p className="tituloQuemSomos">Buffs ativos diariamente!</p>
+                                                <p className="tituloQuemSomos">BUFFS ATIVOS DIARIAMENTE!</p>
                                                 <img src={process.env.PUBLIC_URL+"/images/buffs.png"}></img>
                                             </div>
                                         </div>
