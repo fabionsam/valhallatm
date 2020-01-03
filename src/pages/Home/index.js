@@ -157,7 +157,6 @@ class Home extends React.Component{
                                             </div>
                                             <div className="divTextoQuemSomos col">
                                                 <br/>
-                                                <br/>
                                                 <p className="tituloQuemSomos">Diversa</p>
                                                 <p className="textoQuemSomos">
                                                     Não aceitamos qualquer tipo de discriminação.
@@ -190,10 +189,9 @@ class Home extends React.Component{
                                             </div>
                                             <div className="divTextoQuemSomos col">
                                                 <br/>
-                                                <br/>
                                                 <p className="tituloQuemSomos">Perfil</p>
                                                 <p className="textoQuemSomos">
-                                                RECRUTAMOS PLAYERS ATIVOS NO MAR<br/>
+                                                <b>RECRUTAMOS PLAYERS ATIVOS NO MAR</b><br/>
                                                 <br/>
                                                 | BUFFS ATIVOS/PESCA E COLETA +3<br/>
                                                 | VELEIRO/FRAGATA/CARRACA<br/>
@@ -211,9 +209,29 @@ class Home extends React.Component{
                                 <div className="conteudoQuemSomos">
                                     <div className="container">
                                         <div className="row">
-                                            <div className="divTextoQuemSomos col" style={{textAlign: "center"}}>
-                                                <p className="tituloQuemSomos">BUFFS ATIVOS DIARIAMENTE!</p>
-                                                <img src={process.env.PUBLIC_URL+"/images/buffs.png"}></img>
+                                        <div className="col-auto">
+                                                <div className="imgEspada">
+                                                    <svg preserveAspectRatio="xMidYMid meet" data-bbox="32.001 32 135.998 136.002" viewBox="32.001 32 135.998 136.002" height="100%" width="100%" xmlns="http://www.w3.org/2000/svg" data-type="color" role="img">
+                                                        <g>
+                                                            <path d="M165.446 40.54l-5.982-5.982A8.676 8.676 0 0 0 153.29 32a8.676 8.676 0 0 0-6.174 2.558L123.98 57.693l-3.709-3.709a11.282 11.282 0 0 0-3.299-7.197 11.378 11.378 0 0 0-8.1-3.356c-3.06 0-5.937 1.192-8.1 3.356-4.467 4.466-4.467 11.733 0 16.199a11.277 11.277 0 0 0 7.197 3.299l3.709 3.709L84.95 96.721c-9.107-5.441-15.011-14.084-15.092-14.205a2.852 2.852 0 0 0-4.742 3.166c.511.767 12.727 18.805 30.823 20.887 15.763 1.812 24.621 24.985 24.708 25.219a2.856 2.856 0 0 0 2.672 1.852c.331 0 .668-.059.997-.182a2.847 2.847 0 0 0 1.673-3.665c-.289-.775-5.324-13.972-15.145-22.306l19.164-19.162 3.709 3.709a11.287 11.287 0 0 0 3.299 7.198 11.423 11.423 0 0 0 8.1 3.348c2.934 0 5.866-1.116 8.099-3.349a11.378 11.378 0 0 0 3.356-8.1c0-3.06-1.192-5.937-3.356-8.1a11.287 11.287 0 0 0-7.196-3.299l-3.709-3.709 23.135-23.134c3.406-3.405 3.406-8.944.001-12.349z" fill="#2F2D56" data-color="1"></path>
+                                                            <path d="M106.129 104.141a25.938 25.938 0 0 0-5.263-2.316l12.917-12.918a1.901 1.901 0 0 0-2.688-2.688l-14.657 14.657c-2.109-.256-4.129-.799-6.06-1.521l24.843-24.841 10.268 10.268-19.36 19.359z" fill="#EDEDED" data-color="2"></path>
+                                                            <path d="M144.912 85.405a5.661 5.661 0 0 1 4.273 1.657 5.716 5.716 0 0 1 1.685 4.068 5.716 5.716 0 0 1-1.685 4.068 5.762 5.762 0 0 1-8.136 0c-1.127-1.127-1.715-2.644-1.658-4.272a2.853 2.853 0 0 0-.833-2.117l-27.366-27.366a2.852 2.852 0 0 0-2.117-.833 5.632 5.632 0 0 1-4.272-1.657 5.76 5.76 0 0 1 0-8.136c2.173-2.173 5.964-2.173 8.137 0 1.127 1.127 1.715 2.644 1.657 4.272a2.853 2.853 0 0 0 .833 2.117l27.365 27.365a2.914 2.914 0 0 0 2.117.834z" fill="#EDEDED" data-color="2"></path>
+                                                            <path d="M144.912 85.405a5.661 5.661 0 0 1 4.273 1.657 5.716 5.716 0 0 1 1.685 4.068 5.716 5.716 0 0 1-1.685 4.068 5.762 5.762 0 0 1-8.136 0c-1.127-1.127-1.715-2.644-1.658-4.272a2.853 2.853 0 0 0-.833-2.117l-27.366-27.366a2.852 2.852 0 0 0-2.117-.833 5.632 5.632 0 0 1-4.272-1.657 5.76 5.76 0 0 1 0-8.136c2.173-2.173 5.964-2.173 8.137 0 1.127 1.127 1.715 2.644 1.657 4.272a2.853 2.853 0 0 0 .833 2.117l27.365 27.365a2.914 2.914 0 0 0 2.117.834z" opacity=".1"></path>
+                                                            <path fill="#CA9E67" d="M144.655 45.077l10.268 10.269-16.645 16.645-10.268-10.268 16.645-16.646z" data-color="3"></path>
+                                                            <path d="M161.415 48.858l-3.802 3.802-10.268-10.268 3.803-3.803a3.037 3.037 0 0 1 4.286 0l5.982 5.982a3.037 3.037 0 0 1-.001 4.287z" fill="#CA9E67" data-color="3"></path>
+                                                            <path d="M81.98 115.515c-15.444-1.775-26.622-18.221-26.733-18.387a2.85 2.85 0 1 0-4.742 3.166c.35.525 6.198 9.156 15.663 15.209l-17.339 17.34-14.311 14.311a2.845 2.845 0 0 0-.819 1.718l-1.682 15.981a2.851 2.851 0 0 0 3.133 3.133l15.981-1.682a2.85 2.85 0 0 0 1.718-.819l14.311-14.31c.205-.205.332-.452.462-.695.242-.129.488-.255.692-.46l23.87-23.869c8.916 7.344 13.791 20.076 13.856 20.249a2.853 2.853 0 0 0 3.668 1.67 2.847 2.847 0 0 0 1.673-3.665c-.408-1.089-10.163-26.678-29.401-28.89z" fill="#2F2D56" data-color="1"></path>
+                                                            <path d="M64.281 145.987c-.205.205-.332.451-.462.695-.242.129-.488.255-.692.46L49.53 160.738l-11.475 1.207 1.207-11.475 13.598-13.597 18.52-18.521c.004-.004.005-.009.009-.013a35.036 35.036 0 0 0 5.601 1.984l-25.714 25.713a1.901 1.901 0 0 0 2.688 2.688l27.522-27.521c2.059.256 3.998.88 5.815 1.765l-23.02 23.019z" fill="#EDEDED" data-color="2"></path>
+                                                        </g>
+                                                    </svg>							
+                                                </div>
+                                            </div>
+                                            <div className="divTextoQuemSomos col">
+                                                <br/>
+                                                <p className="tituloQuemSomos">Buffs ativos diariamente!</p>
+                                                <img src={process.env.PUBLIC_URL+"/images/buffs/55.png"} height="35px" width="35px"></img> Razão recuperada<br/><br/>
+                                                <img src={process.env.PUBLIC_URL+"/images/buffs/02.png"} height="35px" width="35px"></img> Conclusão de Aquisição<br/><br/>
+                                                <img src={process.env.PUBLIC_URL+"/images/buffs/03.png"} height="35px" width="35px"></img> Boa Sorte<br/><br/>
+                                                <img src={process.env.PUBLIC_URL+"/images/buffs/04.png"} height="35px" width="35px"></img> Estado do Deus Guerreiro<br/>
                                             </div>
                                         </div>
                                     </div>
