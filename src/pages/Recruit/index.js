@@ -28,11 +28,12 @@ const options = [
 class Recruit extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {nome: '', familia: '', gs: '', classe: '', pq: '', captcha: '', message: ''};
+        this.state = {nome: '', familia: '', atvmar: '', classe: '', pq: '', captcha: '', message: '', possuibarco: ''};
 
         this.handleChangeNome = this.handleChangeNome.bind(this);
         this.handleChangeFamilia = this.handleChangeFamilia.bind(this);
-        this.handleChangeGs = this.handleChangeGs.bind(this);
+        this.handleChangeMar = this.handleChangeMar.bind(this);
+        this.handleChangeBarco = this.handleChangeBarco.bind(this);
         this.handleChangeClasse = this.handleChangeClasse.bind(this);
         this.handleChangePq = this.handleChangePq.bind(this);
         this.handleCaptcha = this.handleCaptcha.bind(this);
@@ -51,8 +52,12 @@ class Recruit extends React.Component {
         this.setState({familia: event.target.value});
     }
 
-    handleChangeGs(event) {
-        this.setState({gs: event.target.value});
+    handleChangeMar(event) {
+        this.setState({atvmar: event.target.value});
+    }
+
+    handleChangeBarco(event) {
+        this.setState({possuibarco: event.target.value});
     }
 
     handleChangeClasse = selectedOption => {
@@ -64,7 +69,7 @@ class Recruit extends React.Component {
     }
 
     enviarEmail = async () => {
-        const response = await api.post('/send', {nome: this.state.nome, familia: this.state.familia, gs: this.state.gs, classe: this.state.classe.value, pq: this.state.pq},
+        const response = await api.post('/send', {nome: this.state.nome, familia: this.state.familia, atvmar: this.state.atvmar, classe: this.state.classe.value, pq: this.state.pq},
         {
             auth : { username : "valhalla_tm" , password : "Tavares59@123456$"}
         });
@@ -72,8 +77,8 @@ class Recruit extends React.Component {
     }
 
     handleSubmit(event) {
-        if(this.state.captcha === '' || this.state.classe === '' || this.state.nome === '' ||
-           this.state.familia === '' || this.state.gs === '' || this.state.pq === '')
+        if(this.state.captcha === '' || this.state.classe === '' || this.state.nome === '' || this.state.possuibarco === '' ||
+           this.state.familia === '' || this.state.atvmar === '' || this.state.pq === '')
             return;
         this.enviarEmail();
         event.preventDefault();
@@ -100,7 +105,8 @@ class Recruit extends React.Component {
                             <form style={this.state.message === "Enviado com sucesso! Entraremos em contato." ? { display : "none"} : {}}>
                                 <input type="text" name="nome" placeholder="NOME DO PERSONAGEM" value={this.state.nome} onChange={this.handleChangeNome} required/>
                                 <input type="text" name="familia" placeholder="NOME DA FAMÍLIA" value={this.state.familia} onChange={this.handleChangeFamilia} required/>
-                                <input type="text" name="gs" placeholder="GEAR SCORE (GS)" value={this.state.gs} onChange={this.handleChangeGs} required/>
+                                <input type="text" name="atvmar" placeholder="ATIVO NO MAR?" value={this.state.atvmar} onChange={this.handleChangeMar} required/>
+                                <input type="text" name="possuibarco" placeholder="POSSUI QUAL BARCO?" value={this.state.possuibarco} onChange={this.handleChangeBarco} required/>
                                 <Select
                                     value={this.state.classe}
                                     onChange={this.handleChangeClasse}
