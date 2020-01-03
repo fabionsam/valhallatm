@@ -69,6 +69,9 @@ class Recruit extends React.Component {
     }
 
     enviarEmail = async () => {
+        var btn = document.querySelector(".btn-valhallaEnviar");
+        btn.style = "display: none;"
+        this.setState({message: "Por favor, aguarde..."});
         const response = await api.post('/send', {nome: this.state.nome, familia: this.state.familia, atvmar: this.state.atvmar, classe: this.state.classe.value, pq: this.state.pq},
         {
             auth : { username : "valhalla_tm" , password : "Tavares59@123456$"}
@@ -102,7 +105,7 @@ class Recruit extends React.Component {
                         </div>
                         <div className="modal-body" id="contactform">
                             <h4 className="brand-heading" style={{color: "black"}}>{this.state.message}</h4>
-                            <form style={this.state.message === "Enviado com sucesso! Entraremos em contato." ? { display : "none"} : {}}>
+                            <form style={this.state.message === "Por favor, aguarde..." ? { display : "none"} : {}}>
                                 <input type="text" name="nome" placeholder="NOME DO PERSONAGEM" value={this.state.nome} onChange={this.handleChangeNome} required/>
                                 <input type="text" name="familia" placeholder="NOME DA FAMÍLIA" value={this.state.familia} onChange={this.handleChangeFamilia} required/>
                                 <input type="text" name="atvmar" placeholder="ATIVO NO MAR?" value={this.state.atvmar} onChange={this.handleChangeMar} required/>
