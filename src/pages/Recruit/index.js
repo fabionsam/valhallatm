@@ -72,7 +72,7 @@ class Recruit extends React.Component {
         var btn = document.querySelector(".btn-valhallaEnviar");
         btn.style = "display: none;"
         this.setState({message: "Por favor, aguarde..."});
-        const response = await api.post('/send', {nome: this.state.nome, familia: this.state.familia, atvmar: this.state.atvmar, classe: this.state.classe.value, pq: this.state.pq},
+        const response = await api.post('/send', {nome: this.state.nome, familia: this.state.familia, atvmar: this.state.atvmar, possuibarco: this.state.possuibarco, classe: this.state.classe.value, pq: this.state.pq},
         {
             auth : { username : "valhalla_tm" , password : "Tavares59@123456$"}
         });
