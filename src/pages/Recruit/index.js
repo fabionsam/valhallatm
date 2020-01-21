@@ -12,6 +12,7 @@ const options = [
     { value: 'Cavaleira das Trevas', label: 'Cavaleira das Trevas' },
     { value: 'Domadora', label: 'Domadora' },
     { value: 'Feiticeira', label: 'Feiticeira' },
+    { value: 'Guardiã', label: 'Guardiã' },
     { value: 'Guerreiro', label: 'Guerreiro' },
     { value: 'Kunoichi', label: 'Kunoichi' },
     { value: 'Lahn', label: 'Lahn' },
