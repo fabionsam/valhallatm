@@ -5,129 +5,129 @@ import Recruit from '../Recruit/index.js';
 import { Link } from 'react-router-dom';
 import api from '../../services/api.js';
 
-class Home extends React.Component{
-    constructor(props){
+class Home extends React.Component {
+    constructor(props) {
         super(props);
         this.state = { photos: [] };
     }
-    
-    componentDidMount(){
+
+    componentDidMount() {
         api.get('/getPhoto',
-        {
-            auth : { username : "valhalla_tm" , password : "Tavares59@123456$"}
-        }).then(res => {
-            this.setState({ photos: res.data });
-        });
+            {
+                auth: { username: "valhalla_tm", password: "Tavares59@123456$" }
+            }).then(res => {
+                this.setState({ photos: res.data });
+            });
 
         api.get('/getOficial',
-        {
-            auth : { username : "valhalla_tm" , password : "Tavares59@123456$"}
-        }).then(res => {
-            this.setState({ oficiais: res.data });
-        
-            this.state.oficiais.map((value, index) => {
-                var parentDiv = document.getElementById("oficiaisslider");
-                var newOficial = document.createElement("div");
-                newOficial.className = "divOficiaisFundo";
+            {
+                auth: { username: "valhalla_tm", password: "Tavares59@123456$" }
+            }).then(res => {
+                this.setState({ oficiais: res.data });
 
-                var newDivOverLay = document.createElement("div");
-                newDivOverLay.className = "overlay";
+                this.state.oficiais.map((value, index) => {
+                    var parentDiv = document.getElementById("oficiaisslider");
+                    var newOficial = document.createElement("div");
+                    newOficial.className = "divOficiaisFundo";
 
-                var newDivText = document.createElement("div");
-                newDivText.className = "text";
-                newDivText.innerText = value.oficial;
-                newDivOverLay.appendChild(newDivText);
+                    var newDivOverLay = document.createElement("div");
+                    newDivOverLay.className = "overlay";
 
-                var newImg = document.createElement("img");
-                newImg.className = "imgOficiais";
-                newImg.alt = "";
-                newImg.src = value.photo.indexOf("http") > -1 ? value.photo : `http://${value.photo}`;
+                    var newDivText = document.createElement("div");
+                    newDivText.className = "text";
+                    newDivText.innerText = value.oficial;
+                    newDivOverLay.appendChild(newDivText);
 
-                var newA = document.createElement("a");
-                newA.href = value.photoG.indexOf("http") > -1 ? value.photoG : `http://${value.photoG}`;
-                newA.style = {width: "auto !important"};
-                newA.setAttribute("data-caption", value.oficial);
-                newA.setAttribute("data-fancybox", "oficial");
-                newA.appendChild(newImg);
-                newA.appendChild(newDivOverLay);
+                    var newImg = document.createElement("img");
+                    newImg.className = "imgOficiais";
+                    newImg.alt = "";
+                    newImg.src = value.photo.indexOf("http") > -1 ? value.photo : `http://${value.photo}`;
 
-                var newH6 = document.createElement("h6");
-                newH6.value = value.oficial;
-                
-                var newFigCaption = document.createElement("figcaption");
-                newFigCaption.appendChild(newH6);
+                    var newA = document.createElement("a");
+                    newA.href = value.photoG.indexOf("http") > -1 ? value.photoG : `http://${value.photoG}`;
+                    newA.style = { width: "auto !important" };
+                    newA.setAttribute("data-caption", value.oficial);
+                    newA.setAttribute("data-fancybox", "oficial");
+                    newA.appendChild(newImg);
+                    newA.appendChild(newDivOverLay);
 
-                var newFigure = document.createElement("figure");
-                newFigure.appendChild(newA);
+                    var newH6 = document.createElement("h6");
+                    newH6.value = value.oficial;
 
-                newOficial.appendChild(newFigure);
-                parentDiv.insertBefore(newOficial, parentDiv.nextSibling);
+                    var newFigCaption = document.createElement("figcaption");
+                    newFigCaption.appendChild(newH6);
+
+                    var newFigure = document.createElement("figure");
+                    newFigure.appendChild(newA);
+
+                    newOficial.appendChild(newFigure);
+                    parentDiv.insertBefore(newOficial, parentDiv.nextSibling);
+                });
+
+                window.$('.multiple-items').slick({
+                    arrows: true,
+                    infinite: true,
+                    slidesToShow: 7,
+                    slidesToScroll: 4,
+                    touchMove: true,
+                    dots: false,
+                    responsive: [
+                        {
+                            breakpoint: 1280,
+                            settings: {
+                                slidesToShow: 5,
+                                slidesToScroll: 2,
+                            }
+                        },
+                        {
+                            breakpoint: 1024,
+                            settings: {
+                                slidesToShow: 4,
+                                slidesToScroll: 2,
+                            }
+                        },
+                        {
+                            breakpoint: 768,
+                            settings: {
+                                slidesToShow: 3,
+                                slidesToScroll: 1
+                            }
+                        },
+                        {
+                            breakpoint: 320,
+                            settings: {
+                                slidesToShow: 2,
+                                slidesToScroll: 1
+                            }
+                        }
+                    ]
+                });
             });
-            
-            window.$('.multiple-items').slick({
-                arrows: true,
-                infinite: true,
-                slidesToShow: 7,
-                slidesToScroll: 4,
-                touchMove: true,
-                dots: false,
-                responsive: [
-                    {
-                        breakpoint: 1280,
-                        settings: {
-                            slidesToShow: 5,
-                            slidesToScroll: 2,
-                        }
-                    },
-                    {
-                        breakpoint: 1024,
-                        settings: {
-                        slidesToShow: 4,
-                        slidesToScroll: 2,
-                        }
-                    },
-                    {
-                        breakpoint: 768,
-                        settings: {
-                        slidesToShow: 3,
-                        slidesToScroll: 1
-                        }
-                    },
-                    {
-                        breakpoint: 320,
-                        settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 1
-                        }
-                    }
-                ]
-            });
-        });
     }
 
-    render(){
-        return(
+    render() {
+        return (
             <div id="Home">
-                < Header/>
-                < Recruit/>
+                < Header />
+                < Recruit />
                 <div id="divCabecalho">
                     <div id="contentCabecalho" className="container">
                         <div className="row justify-content-center">
                             <div className="col">
                                 <h1>VALHALLA_TM</h1>
                                 <h3>Junte-se a nós</h3>
-                                <h4>Conteúdo Marítimo<br/>Khan | Vell | Permuteiros</h4>
-                                
-                                <button type="button" style={{marginTop: "15px"}} className="btn btn-valhalla" data-toggle="modal" data-target="#ExemploModalCentralizado">
+                                <h4>FOCO PVPVE CASUAL<br />CONTEÚDO MARÍTIMO<br />NODE WAR|GVG|TREINO PVP</h4>
+
+                                <button type="button" style={{ marginTop: "15px" }} className="btn btn-valhalla" data-toggle="modal" data-target="#ExemploModalCentralizado">
                                     Recrutamento
-                                </button><br/><br/>
-                                <a href="https://discord.gg/NBk4r5t" rel="noopener noreferrer" target="_blank"><img alt="" src={process.env.PUBLIC_URL+"/images/discord.png"}></img></a>
-                                
+                                </button><br /><br />
+                                <a href="https://discord.gg/NBk4r5t" rel="noopener noreferrer" target="_blank"><img alt="" src={process.env.PUBLIC_URL + "/images/discord.png"}></img></a>
+
                             </div>
                         </div>
                     </div>
                 </div>
-                <div id="divSobre" style={{backgroundImage: "url("+process.env.PUBLIC_URL+"/images/papel.jpg)", backgroundPosition: "center" }}>
+                <div id="divSobre" style={{ backgroundImage: "url(" + process.env.PUBLIC_URL + "/images/papel.jpg)", backgroundPosition: "center" }}>
                     <div className="containerQuemSomos container.col-md- width-85">
                         <div className="row">
                             <div className="divTituloSobre col-auto">
@@ -152,15 +152,18 @@ class Home extends React.Component{
                                                             <path d="M81.98 115.515c-15.444-1.775-26.622-18.221-26.733-18.387a2.85 2.85 0 1 0-4.742 3.166c.35.525 6.198 9.156 15.663 15.209l-17.339 17.34-14.311 14.311a2.845 2.845 0 0 0-.819 1.718l-1.682 15.981a2.851 2.851 0 0 0 3.133 3.133l15.981-1.682a2.85 2.85 0 0 0 1.718-.819l14.311-14.31c.205-.205.332-.452.462-.695.242-.129.488-.255.692-.46l23.87-23.869c8.916 7.344 13.791 20.076 13.856 20.249a2.853 2.853 0 0 0 3.668 1.67 2.847 2.847 0 0 0 1.673-3.665c-.408-1.089-10.163-26.678-29.401-28.89z" fill="#2F2D56" data-color="1"></path>
                                                             <path d="M64.281 145.987c-.205.205-.332.451-.462.695-.242.129-.488.255-.692.46L49.53 160.738l-11.475 1.207 1.207-11.475 13.598-13.597 18.52-18.521c.004-.004.005-.009.009-.013a35.036 35.036 0 0 0 5.601 1.984l-25.714 25.713a1.901 1.901 0 0 0 2.688 2.688l27.522-27.521c2.059.256 3.998.88 5.815 1.765l-23.02 23.019z" fill="#EDEDED" data-color="2"></path>
                                                         </g>
-                                                    </svg>							
+                                                    </svg>
                                                 </div>
                                             </div>
                                             <div className="divTextoQuemSomos col">
-                                                <br/>
-                                                <p className="tituloQuemSomos">Diversa</p>
+                                                <br />
+                                                {/* <p className="tituloQuemSomos"></p> */}
                                                 <p className="textoQuemSomos">
-                                                    Não aceitamos qualquer tipo de discriminação.
-                                                    Respeita as minas e as monas!
+                                                    SOMOS UMA GUILD PVPVE CASUAL
+                                                    QUE AUXILIA NOVATOS E VETERANOS
+                                                    EM UM AMBIENTE AMIGÁVEL
+
+                                                    "ONDE TODO BRAVO GUERREIRO PODE VIVER PARA SEMPRE"
                                                 </p>
                                             </div>
                                         </div>
@@ -184,21 +187,21 @@ class Home extends React.Component{
                                                             <path d="M81.98 115.515c-15.444-1.775-26.622-18.221-26.733-18.387a2.85 2.85 0 1 0-4.742 3.166c.35.525 6.198 9.156 15.663 15.209l-17.339 17.34-14.311 14.311a2.845 2.845 0 0 0-.819 1.718l-1.682 15.981a2.851 2.851 0 0 0 3.133 3.133l15.981-1.682a2.85 2.85 0 0 0 1.718-.819l14.311-14.31c.205-.205.332-.452.462-.695.242-.129.488-.255.692-.46l23.87-23.869c8.916 7.344 13.791 20.076 13.856 20.249a2.853 2.853 0 0 0 3.668 1.67 2.847 2.847 0 0 0 1.673-3.665c-.408-1.089-10.163-26.678-29.401-28.89z" fill="#2F2D56" data-color="1"></path>
                                                             <path d="M64.281 145.987c-.205.205-.332.451-.462.695-.242.129-.488.255-.692.46L49.53 160.738l-11.475 1.207 1.207-11.475 13.598-13.597 18.52-18.521c.004-.004.005-.009.009-.013a35.036 35.036 0 0 0 5.601 1.984l-25.714 25.713a1.901 1.901 0 0 0 2.688 2.688l27.522-27.521c2.059.256 3.998.88 5.815 1.765l-23.02 23.019z" fill="#EDEDED" data-color="2"></path>
                                                         </g>
-                                                    </svg>							
+                                                    </svg>
                                                 </div>
                                             </div>
                                             <div className="divTextoQuemSomos col">
-                                                <br/>
+                                                <br />
                                                 <p className="tituloQuemSomos">Perfil</p>
                                                 <p className="textoQuemSomos">
-                                                <b>RECRUTAMOS PLAYERS ATIVOS NO MAR</b><br/>
-                                                <br/>
-                                                | BUFFS ATIVOS/PESCA E COLETA +3<br/>
-                                                | VELEIRO/FRAGATA/CARRACA<br/>
-                                                | PERMUTEIROS INSANOS<br/>
-                                                | PT RUSH CARRACA<br/>
-                                                | KHAN E PT VELL<br/>
-                                                | PAYOUT QUINZENAL
+                                                    NODE WAR| GVG | TREINO PVP <br />
+                                                    DIÁRIAS OKILUA<br />
+                                                    AUXÍLIO MARÍTIMO<br />
+                                                    KHAN DIÁRIO NA ALIANÇA<br />
+                                                    SALÁRIO PROGRESSIVO<br />
+                                                    PAYOUT MENSAL<br />
+                                                    FULL BUFFS<br />
+                                                    DISCORD NAS ATIVIDADES DA GUILD
                                                 </p>
                                             </div>
                                         </div>
@@ -209,7 +212,7 @@ class Home extends React.Component{
                                 <div className="conteudoQuemSomos">
                                     <div className="container">
                                         <div className="row">
-                                        <div className="col-auto">
+                                            <div className="col-auto">
                                                 <div className="imgEspada">
                                                     <svg preserveAspectRatio="xMidYMid meet" data-bbox="32.001 32 135.998 136.002" viewBox="32.001 32 135.998 136.002" height="100%" width="100%" xmlns="http://www.w3.org/2000/svg" data-type="color" role="img">
                                                         <g>
@@ -222,16 +225,16 @@ class Home extends React.Component{
                                                             <path d="M81.98 115.515c-15.444-1.775-26.622-18.221-26.733-18.387a2.85 2.85 0 1 0-4.742 3.166c.35.525 6.198 9.156 15.663 15.209l-17.339 17.34-14.311 14.311a2.845 2.845 0 0 0-.819 1.718l-1.682 15.981a2.851 2.851 0 0 0 3.133 3.133l15.981-1.682a2.85 2.85 0 0 0 1.718-.819l14.311-14.31c.205-.205.332-.452.462-.695.242-.129.488-.255.692-.46l23.87-23.869c8.916 7.344 13.791 20.076 13.856 20.249a2.853 2.853 0 0 0 3.668 1.67 2.847 2.847 0 0 0 1.673-3.665c-.408-1.089-10.163-26.678-29.401-28.89z" fill="#2F2D56" data-color="1"></path>
                                                             <path d="M64.281 145.987c-.205.205-.332.451-.462.695-.242.129-.488.255-.692.46L49.53 160.738l-11.475 1.207 1.207-11.475 13.598-13.597 18.52-18.521c.004-.004.005-.009.009-.013a35.036 35.036 0 0 0 5.601 1.984l-25.714 25.713a1.901 1.901 0 0 0 2.688 2.688l27.522-27.521c2.059.256 3.998.88 5.815 1.765l-23.02 23.019z" fill="#EDEDED" data-color="2"></path>
                                                         </g>
-                                                    </svg>							
+                                                    </svg>
                                                 </div>
                                             </div>
                                             <div className="divTextoQuemSomos col">
-                                                <br/>
+                                                <br />
                                                 <p className="tituloQuemSomos">Buffs ativos diariamente!</p>
-                                                <img src={process.env.PUBLIC_URL+"/images/buffs/55.png"} height="35px" width="35px"></img> Razão recuperada<br/><br/>
-                                                <img src={process.env.PUBLIC_URL+"/images/buffs/02.png"} height="35px" width="35px"></img> Conclusão de Aquisição<br/><br/>
-                                                <img src={process.env.PUBLIC_URL+"/images/buffs/03.png"} height="35px" width="35px"></img> Boa Sorte<br/><br/>
-                                                <img src={process.env.PUBLIC_URL+"/images/buffs/04.png"} height="35px" width="35px"></img> Estado do Deus Guerreiro<br/>
+                                                <img src={process.env.PUBLIC_URL + "/images/buffs/55.png"} height="35px" width="35px"></img> Razão recuperada<br /><br />
+                                                <img src={process.env.PUBLIC_URL + "/images/buffs/02.png"} height="35px" width="35px"></img> Conclusão de Aquisição<br /><br />
+                                                <img src={process.env.PUBLIC_URL + "/images/buffs/03.png"} height="35px" width="35px"></img> Boa Sorte<br /><br />
+                                                <img src={process.env.PUBLIC_URL + "/images/buffs/04.png"} height="35px" width="35px"></img> Estado do Deus Guerreiro<br />
                                             </div>
                                         </div>
                                     </div>
@@ -319,7 +322,7 @@ class Home extends React.Component{
                                     this.state.photos.map((value, index) => {
                                         return (
                                             <figure hidden key={value.id}>
-                                                <a data-fancybox="gallery" data-caption={value.caption} href={value.photo}><img src={value.photo}/></a>
+                                                <a data-fancybox="gallery" data-caption={value.caption} href={value.photo}><img src={value.photo} /></a>
                                                 <figcaption>
                                                     {value.caption}
                                                 </figcaption>
@@ -353,7 +356,7 @@ class Home extends React.Component{
                                         </svg>
                                     </div>
                                 </Link>
-                                <h5>Regras e <br/>Habilidades</h5>
+                                <h5>Regras e <br />Habilidades</h5>
                             </div>
                         </div>
                     </div>
@@ -373,7 +376,7 @@ class Home extends React.Component{
                         </div>
                     </div>
                 </div>
-                < Footer/>
+                < Footer />
             </div>
         );
     }
