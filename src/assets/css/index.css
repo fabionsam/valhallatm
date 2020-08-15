@@ -111,7 +111,7 @@
 }
 
 .btnRecruit:hover {
-	background-color: rgba(107, 166, 191, 1) !important;
+	background-color: rgba(139, 0, 0, 1) !important;
 	border-color: rgba(50, 50, 50, 1) !important;
 }
 
@@ -126,19 +126,19 @@
 }
 
 .btn-valhalla:hover {
-	background-color: rgba(107, 166, 191, 1);
+	background-color: rgba(139, 0, 0, 1);
 	border-color: rgba(50, 50, 50, 1);
 }
 
 .btn-valhallaEnviar {
 	color: #FFFF !important;
 	cursor: pointer !important;
-	background-color: rgba(107, 166, 191, 1);
+	background-color: rgba(139, 0, 0, 1);
 	transition: border-color 0.4s ease 0s, background-color 0.4s ease 0s;  
 }
 
 .btn-valhallaEnviar:hover {
-	background-color: rgba(50, 166, 191, 1);
+	background-color: rgba(100, 0, 0, 1);
 	border-color: rgba(50, 50, 50, 1);
 }
 
