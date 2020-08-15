@@ -14,7 +14,7 @@ class Regras extends React.Component {
             <div id="Regras">
                 <Header />
                 <Recruit />
-                <div id="divRegras" className="container-fluid" style={{ height: "900px" }}>
+                <div id="divRegras" className="container-fluid" style={{ height: "1000px" }}>
                     <div className="row justify-content-center" style={{ height: "100%" }}>
                         <div className="col-6" style={{ backgroundColor: "rgba(255, 255, 255, 0.5)", height: "100%", alignContent: "center" }}>
                             <div style={{ marginTop: "9.5%", marginLeft: "7%", marginRight: "27%" }}>
@@ -48,8 +48,8 @@ class Regras extends React.Component {
                                 <span style={{ fontSize: "12px", fontFamily: "cinzel", letterSpacing: "0.12em", marginRight: "5px" }}>Voltar</span>
                             </div>
                             <div style={{ marginTop: "-90px" }}>
-                                <img src={process.env.PUBLIC_URL + "/images/habilidades1.png"} style={{ marginTop: "15px" }}></img>
-                                <img src={process.env.PUBLIC_URL + "/images/habilidades2.png"} style={{ marginTop: "30px" }}></img>
+                                <img src={process.env.PUBLIC_URL + "/images/habilidadesnovas.png"} style={{ marginTop: "15px" }}></img>
+                                {/* <img src={process.env.PUBLIC_URL + "/images/habilidades2.png"} style={{ marginTop: "30px" }}></img> */}
                             </div>
                         </div>
                     </div>

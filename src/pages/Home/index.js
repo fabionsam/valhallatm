@@ -116,7 +116,7 @@ class Home extends React.Component {
                             <div className="col">
                                 <h1>VALHALLA_TM</h1>
                                 <h3>Junte-se a nós</h3>
-                                <h4>FOCO PVPVE CASUAL<br />CONTEÚDO MARÍTIMO<br />NODE WAR|GVG|TREINO PVP</h4>
+                                <h4>FOCO PVPVE CASUAL<br />CONTEÚDO MARÍTIMO<br />NODE WAR | GVG | TREINO PVP</h4>
 
                                 <button type="button" style={{ marginTop: "15px" }} className="btn btn-valhalla" data-toggle="modal" data-target="#ExemploModalCentralizado">
                                     Recrutamento
@@ -157,12 +157,12 @@ class Home extends React.Component {
                                             </div>
                                             <div className="divTextoQuemSomos col">
                                                 <br />
-                                                {/* <p className="tituloQuemSomos"></p> */}
+                                                <p className="tituloQuemSomos">Sobre nós</p>
                                                 <p className="textoQuemSomos">
                                                     SOMOS UMA GUILD PVPVE CASUAL
                                                     QUE AUXILIA NOVATOS E VETERANOS
                                                     EM UM AMBIENTE AMIGÁVEL
-
+                                                    <br /><br />
                                                     "ONDE TODO BRAVO GUERREIRO PODE VIVER PARA SEMPRE"
                                                 </p>
                                             </div>
@@ -377,7 +377,7 @@ class Home extends React.Component {
                     </div>
                 </div>
                 < Footer />
-            </div>
+            </div >
         );
     }
 }
